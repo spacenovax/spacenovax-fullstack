@@ -1,13 +1,14 @@
-# SpaceNovaX v4.1 EXP Fix
+# SpaceNovaX v5 Premium Dashboard
 
 변경사항:
-- 레벨 경험치 표기를 XP에서 EXP로 변경
-- SPNX Points 표기는 그대로 유지
-- 채굴/미션/관리자/지갑/토크노믹스 기능 유지
+- XP 표기를 전부 EXP로 변경
+- Lv.7 옆 로켓 아이콘 제거
+- 우주인/레벨 배지 영역으로 변경
+- 대시보드형 프리미엄 UI
+- SPNX Points, 채굴, 미션, 지갑, 관리자 기능 유지
 
-업로드 방법:
-1. 압축을 풉니다.
-2. GitHub spacenovax-fullstack 저장소에 전체 덮어올립니다.
-3. Commit changes
-4. Render → Manual Deploy → Deploy latest commit
-5. 접속: https://spacenovax-fullstack.onrender.com/?v=41
+배포:
+1. 압축 풀기
+2. GitHub spacenovax-fullstack에 덮어올리기
+3. Render Manual Deploy
+4. 접속: https://spacenovax-fullstack.onrender.com/?v=5

@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v4-1-exp-fix",
-  "version": "4.1.0",
-  "description": "SpaceNovaX Elite UI v4.1 EXP wording fix",
+  "name": "spacenovax-fullstack-v5-premium-dashboard",
+  "version": "5.0.0",
+  "description": "SpaceNovaX Premium Dashboard UI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
