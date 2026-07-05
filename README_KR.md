@@ -1,17 +1,11 @@
-# SpaceNovaX v3.1 Fixed Inline
+# SpaceNovaX v4 Elite UI
 
-This version fixes the CSS loading issue by embedding the premium design CSS directly inside index.html.
+Elite UI upgrade:
+- better dark space background
+- official X/SPNX symbol
+- improved spaceship animation
+- cleaner Telegram Mini App mobile layout
+- mining, missions, friends, wallet, tokenomics
+- admin dashboard
 
-Upload these files to GitHub and redeploy on Render.
-
-Build Command:
-npm install
-
-Start Command:
-npm start
-
-Environment Variables:
-BOT_TOKEN=your BotFather token
-ADMIN_KEY=spacenovax-admin
-SKIP_TELEGRAM_VERIFY=true
-DATABASE_URL=Render PostgreSQL URL
+Upload all files to GitHub and redeploy Render.

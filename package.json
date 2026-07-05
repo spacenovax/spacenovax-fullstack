@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v3-fixed-inline",
-  "version": "3.1.0",
-  "description": "SpaceNovaX fixed premium UI with inline CSS fallback",
+  "name": "spacenovax-fullstack-v4-elite-ui",
+  "version": "4.0.0",
+  "description": "SpaceNovaX Elite Telegram Mini App UI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
