@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v8-ultimate-ui",
-  "version": "8.0.0",
-  "description": "SpaceNovaX Ultimate Telegram Mini App UI",
+  "name": "spacenovax-fullstack-v9-polish-ui",
+  "version": "9.0.0",
+  "description": "SpaceNovaX v9 polished Telegram Mini App UI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
