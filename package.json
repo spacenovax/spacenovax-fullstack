@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v2",
-  "version": "2.0.0",
-  "description": "SpaceNovaX Telegram Mini App + API + Mission Rewards + Admin Dashboard",
+  "name": "spacenovax-fullstack-v3-premium",
+  "version": "3.0.0",
+  "description": "SpaceNovaX Premium Telegram Mini App + API + Admin Dashboard",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

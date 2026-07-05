@@ -1,14 +1,18 @@
-# SpaceNovaX Fullstack v2
+# SpaceNovaX Premium Fullstack v3
 
-Includes:
-- Telegram Mini App UI
-- SPNX Points mining
-- 24h timer and claim
+Premium Telegram Mini App with:
+- SpaceNovaX X/SPNX symbol style
+- Premium spaceship UI
+- SPNX Points real-time decimal mining
+- 24h mining/claim
+- XP and level system
+- Daily check-in
 - Mission rewards
 - Admin mission approval
-- PostgreSQL-ready user database
-- Future Solana wallet registration
-- Admin Dashboard at /admin.html
+- Admin point adjustment
+- Tokenomics and halving screens
+- Solana wallet registration placeholder
+- PostgreSQL support
 
 ## Render Web Service
 Build Command:
@@ -21,7 +25,7 @@ npm start
 BOT_TOKEN=BotFather token
 ADMIN_KEY=your admin password
 DATABASE_URL=Render PostgreSQL URL
-SKIP_TELEGRAM_VERIFY=true  # only for browser testing
+SKIP_TELEGRAM_VERIFY=true
 
 WEBSITE_URL=https://spacenovax.com
 TELEGRAM_CHANNEL_URL=https://t.me/spacenovaxteam
