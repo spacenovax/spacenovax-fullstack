@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v3-premium",
-  "version": "3.0.0",
-  "description": "SpaceNovaX Premium Telegram Mini App + API + Admin Dashboard",
+  "name": "spacenovax-fullstack-v3-fixed-inline",
+  "version": "3.1.0",
+  "description": "SpaceNovaX fixed premium UI with inline CSS fallback",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
