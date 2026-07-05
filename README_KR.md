@@ -1,14 +1,15 @@
-# SpaceNovaX v5 Premium Dashboard
+# SpaceNovaX v7 Launch UI
 
-변경사항:
-- XP 표기를 전부 EXP로 변경
-- Lv.7 옆 로켓 아이콘 제거
-- 우주인/레벨 배지 영역으로 변경
-- 대시보드형 프리미엄 UI
-- SPNX Points, 채굴, 미션, 지갑, 관리자 기능 유지
+개선사항:
+- 겹침 버그 수정: Balance와 Timer 박스 분리
+- 로켓 아이콘 제거, 우주인 + 레벨 배지 적용
+- EXP 표기 고정
+- 프리미엄 우주선 CSS 모델 개선
+- SPNX 실시간 포인트 애니메이션
+- Telegram Mini App용 레이아웃 정리
 
 배포:
 1. 압축 풀기
-2. GitHub spacenovax-fullstack에 덮어올리기
-3. Render Manual Deploy
-4. 접속: https://spacenovax-fullstack.onrender.com/?v=5
+2. GitHub spacenovax-fullstack 저장소에 전체 덮어올리기
+3. Render → Manual Deploy → Deploy latest commit
+4. 접속: https://spacenovax-fullstack.onrender.com/?v=7

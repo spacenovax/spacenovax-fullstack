@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v5-premium-dashboard",
-  "version": "5.0.0",
-  "description": "SpaceNovaX Premium Dashboard UI",
+  "name": "spacenovax-fullstack-v7-launch-ui",
+  "version": "7.0.0",
+  "description": "SpaceNovaX Launch Grade Telegram Mini App UI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
