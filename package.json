@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v4-elite-ui",
-  "version": "4.0.0",
-  "description": "SpaceNovaX Elite Telegram Mini App UI",
+  "name": "spacenovax-fullstack-v4-1-exp-fix",
+  "version": "4.1.0",
+  "description": "SpaceNovaX Elite UI v4.1 EXP wording fix",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
