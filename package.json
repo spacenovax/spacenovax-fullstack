@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v18-release-candidate-ui",
-  "version": "18.0.0",
-  "description": "SpaceNovaX v18 release candidate UI polish",
+  "name": "spacenovax-fullstack-v19-final-balance-ui",
+  "version": "19.0.0",
+  "description": "SpaceNovaX v19 final balanced mining UI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

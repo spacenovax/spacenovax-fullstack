@@ -890,3 +890,200 @@
   .v15-today b,.v15-today b em{font-size:16px!important}
   .v15-boost{left:28px!important;right:28px!important}
 }
+
+/* v19 final balance: non-grid stars, smaller ship, clean layers */
+.brand:after{content:"v19";margin-left:8px;font-size:13px;background:#7e43ff77;border:1px solid #b86cff;border-radius:10px;padding:3px 8px;font-weight:1000}
+
+/* Disable all previous dot/grid star backgrounds inside hero */
+.v15-stars-layer,.v17-random-stars,.v18-organic-stars{display:none!important;background:none!important;opacity:0!important}
+.v15-hero{
+  height:555px!important;
+  overflow:hidden!important;
+  background:
+    radial-gradient(ellipse at 55% 49%, rgba(126,67,255,.18), transparent 33%),
+    radial-gradient(ellipse at 78% 33%, rgba(52,239,255,.10), transparent 27%),
+    radial-gradient(ellipse at 24% 70%, rgba(23,141,255,.18), transparent 31%),
+    linear-gradient(180deg,#050917 0%,#02040d 100%)!important;
+}
+
+/* Organic random stars drawn with box-shadow: no grid */
+.v19-stars{
+  position:absolute;
+  left:0; top:0;
+  width:2px; height:2px;
+  z-index:2; pointer-events:none;
+  background:#fff;
+  border-radius:50%;
+  opacity:.9;
+  box-shadow:
+    17px 42px 0 0 #fff,
+    49px 318px 0 1px #34efff,
+    88px 176px 0 .5px #fff,
+    122px 91px 0 0 #df42ff,
+    151px 438px 0 .5px #fff,
+    187px 256px 0 1.5px #34efff,
+    228px 56px 0 .5px #fff,
+    253px 363px 0 0 #df42ff,
+    289px 139px 0 1px #fff,
+    317px 492px 0 .5px #34efff,
+    355px 214px 0 0 #fff,
+    384px 73px 0 1.5px #df42ff,
+    415px 330px 0 .5px #fff,
+    442px 121px 0 0 #34efff,
+    469px 447px 0 1px #fff,
+    33px 509px 0 .5px #df42ff,
+    74px 382px 0 0 #fff,
+    109px 225px 0 1px #34efff,
+    168px 32px 0 0 #fff,
+    203px 398px 0 .5px #fff,
+    244px 292px 0 0 #df42ff,
+    301px 84px 0 1px #fff,
+    336px 170px 0 .5px #34efff,
+    397px 259px 0 0 #fff,
+    456px 301px 0 .5px #df42ff,
+    23px 156px 0 .5px #fff,
+    139px 512px 0 1px #34efff,
+    276px 468px 0 0 #fff,
+    428px 42px 0 .5px #fff;
+  animation:v19Twinkle 5s ease-in-out infinite alternate;
+  filter:drop-shadow(0 0 5px #fff);
+}
+.v19-stars:before{
+  content:"";
+  position:absolute;left:0;top:0;width:3px;height:3px;border-radius:50%;background:#34efff;
+  box-shadow:
+    62px 74px 0 0 #fff,
+    134px 278px 0 1px #fff,
+    198px 146px 0 0 #df42ff,
+    260px 412px 0 1px #34efff,
+    323px 238px 0 0 #fff,
+    370px 496px 0 1px #fff,
+    429px 188px 0 0 #34efff,
+    474px 68px 0 1px #df42ff,
+    44px 456px 0 0 #fff,
+    214px 514px 0 1px #fff,
+    347px 99px 0 0 #fff;
+  animation:v19Twinkle 3.8s ease-in-out infinite alternate-reverse;
+}
+.v19-stars:after{
+  content:"";
+  position:absolute;left:0;top:0;width:1px;height:1px;border-radius:50%;background:#fff;
+  box-shadow:
+    11px 233px 0 0 #fff, 57px 116px 0 0 #fff, 96px 481px 0 0 #34efff,
+    126px 341px 0 0 #fff, 174px 204px 0 0 #fff, 236px 106px 0 0 #df42ff,
+    271px 348px 0 0 #fff, 309px 428px 0 0 #fff, 359px 146px 0 0 #34efff,
+    402px 387px 0 0 #fff, 467px 535px 0 0 #fff;
+  opacity:.8;
+}
+@keyframes v19Twinkle{from{opacity:.45;filter:brightness(.75) drop-shadow(0 0 2px #fff)}to{opacity:.95;filter:brightness(1.75) drop-shadow(0 0 7px #fff)}}
+
+/* meteors softer */
+.v18-meteor,.v17-meteor{opacity:0!important}
+.v15-hero:before{
+  content:"";
+  position:absolute;z-index:3;left:auto;right:-160px;top:110px;width:130px;height:2px;
+  background:linear-gradient(90deg,#fff,#34efff,transparent);
+  box-shadow:0 0 14px #34efff;
+  transform:rotate(-31deg);
+  border-radius:99px;
+  animation:v19Meteor 13s linear infinite 2s;
+}
+@keyframes v19Meteor{
+  0%{opacity:0;transform:translate(0,0) rotate(-31deg)}
+  8%{opacity:.85}
+  20%{opacity:0}
+  100%{opacity:0;transform:translate(-760px,420px) rotate(-31deg)}
+}
+
+/* planet: 20% smaller and more off-screen */
+.v15-planet{
+  width:160px!important;height:160px!important;
+  left:-62px!important;bottom:145px!important;
+  opacity:.88!important;
+  box-shadow:0 0 54px #178dff,inset -26px -26px 38px #000d,inset 14px 13px 22px #ffffff18!important;
+}
+.v15-planet:before{inset:-7px!important;opacity:.6}
+.v15-moon{width:42px!important;height:42px!important;right:62px!important;top:152px!important;opacity:.75}
+
+/* ship: reduce and move slightly upward; don't dominate */
+.v15-ship{
+  top:218px!important;
+  width:248px!important;height:158px!important;
+  left:53%!important;
+  transform:translateX(-50%) scale(.78)!important;
+  z-index:7!important;
+  filter:drop-shadow(0 0 24px #34efff) drop-shadow(0 0 16px #7e43ff)!important;
+}
+@keyframes v17Ship{
+  0%,100%{transform:translateX(-50%) translateY(0) scale(.78)}
+  50%{transform:translateX(-50%) translateY(-7px) scale(.795)}
+}
+.v15-ship-body{left:72px!important;top:59px!important;width:128px!important;height:46px!important}
+.v15-ship-nose{left:104px!important;top:15px!important;width:62px!important;height:78px!important}
+.v15-wing.top{left:22px!important;top:75px!important;width:98px!important;height:50px!important}
+.v15-wing.bottom{left:132px!important;bottom:36px!important;width:98px!important;height:50px!important}
+.v15-engine.e1{left:86px!important;bottom:34px!important;width:25px!important;height:25px!important}
+.v15-engine.e2{left:137px!important;bottom:34px!important;width:25px!important;height:25px!important}
+.v15-flame{left:99px!important;bottom:-38px!important;width:48px!important;height:72px!important}
+.v15-ship small{font-size:14px!important;left:48px!important;top:92px!important}
+.v15-ship small:after{left:132px!important}
+
+/* Today's mining: 50% smaller and placed below ship, not over boost */
+.v15-today{
+  width:178px!important;min-height:46px!important;
+  bottom:108px!important;
+  padding:7px 9px!important;gap:8px!important;
+  border-radius:14px!important;
+  z-index:9!important;
+}
+.v15-today .pickaxe{width:34px!important;height:34px!important;font-size:17px!important}
+.v15-today span{font-size:11px!important}
+.v15-today b,.v15-today b em{font-size:15px!important;line-height:1.05!important}
+.v15-today b{margin-top:2px!important}
+
+/* boost separated below card */
+.v15-boost{
+  bottom:20px!important;
+  left:60px!important;right:60px!important;
+  z-index:8!important;
+}
+.v15-boost div{padding:9px 6px!important}
+.v15-boost span{font-size:11px!important}
+.v15-boost b{font-size:16px!important}
+
+/* particles: use gem prefix and clear placement */
+.v15-particle.p1{left:92px!important;top:248px!important}
+.v15-particle.p2{right:76px!important;bottom:236px!important}
+.v15-particle{font-size:14px!important;text-shadow:0 0 12px #34efff!important}
+.v15-gems{right:40px!important;bottom:210px!important;width:110px!important;height:65px!important}
+
+/* keep text readable */
+.v15-balance h2{font-size:38px!important}
+.v15-balance p{font-size:25px!important}
+.usd{font-size:14px!important}
+
+/* mobile */
+@media(max-width:430px){
+  .v15-hero{height:520px!important}
+  .v19-stars{transform:scale(.9);transform-origin:top left}
+  .v15-balance h2{font-size:33px!important}
+  .v15-balance p{font-size:22px!important}
+  .v15-planet{width:150px!important;height:150px!important;left:-60px!important;bottom:150px!important}
+  .v15-ship{
+    top:220px!important;width:230px!important;height:148px!important;left:53%!important;
+    transform:translateX(-50%) scale(.74)!important;
+  }
+  @keyframes v17Ship{
+    0%,100%{transform:translateX(-50%) translateY(0) scale(.74)}
+    50%{transform:translateX(-50%) translateY(-6px) scale(.755)}
+  }
+  .v15-ship-body{left:68px!important;top:56px!important;width:118px!important;height:43px!important}
+  .v15-ship-nose{left:96px!important;top:14px!important;width:58px!important;height:72px!important}
+  .v15-wing.top{left:20px!important;top:72px!important;width:90px!important;height:47px!important}
+  .v15-wing.bottom{left:122px!important;bottom:34px!important;width:90px!important;height:47px!important}
+  .v15-engine.e1{left:80px!important;bottom:32px!important}
+  .v15-engine.e2{left:128px!important;bottom:32px!important}
+  .v15-flame{left:92px!important;bottom:-36px!important;width:44px!important;height:66px!important}
+  .v15-today{width:164px!important;bottom:110px!important}
+  .v15-boost{left:38px!important;right:38px!important;bottom:22px!important}
+}
