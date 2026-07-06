@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v43-rebuilt-header",
-  "version": "43.0.0",
-  "description": "SpaceNovaX v43 rebuilt header component",
+  "name": "spacenovax-fullstack-v44-single-header-fix",
+  "version": "44.0.0",
+  "description": "SpaceNovaX v44 single header fix",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
