@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v14-referral-final",
-  "version": "14.0.0",
-  "description": "SpaceNovaX v14 referral final fix",
+  "name": "spacenovax-fullstack-v15-final-ui",
+  "version": "15.0.0",
+  "description": "SpaceNovaX v15 final polished mining UI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

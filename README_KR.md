@@ -1,21 +1,19 @@
-# SpaceNovaX v14 Referral Final
+# SpaceNovaX v15 Final UI
 
-수정:
-- 프로젝트 전체에서 SPNXO / SPNX0 문자열 제거
-- Friends 화면 최종 디자인 적용
-- Referral Code: SPNX-USER
-- Invite Link: https://t.me/SpaceNovaX_bot?start=SPNX-USER
-- 추천 코드/링크 복사 버튼
-- Telegram 공유 버튼
-- 추천 통계 카드 고급 디자인
-- v14 안전 패치: 화면에서 0.5초마다 SPNX-USER로 강제 동기화
-
-검증:
-- SPNXO 남은 파일: 없음
-- SPNX0 남은 파일: 없음
+수정/개선:
+- Home 화면 전체 재구성
+- 우주선 중앙 배치 및 잘림 문제 수정
+- 행성 입체감/Glow 강화
+- 별/파티클/채굴 숫자 애니메이션 강화
+- Today’s Mining 카드 중앙 배치
+- Mining Ready / Daily Reward 카드 대형화
+- Boost / Team / Tasks / Shop / Upgrade 빠른 메뉴 추가
+- 하단 메뉴 고정 및 크기 개선
+- Friends 추천 코드 SPNX-USER 유지
+- SPNXO / SPNX0 오타 제거
 
 배포:
 1. 압축 풀기
 2. GitHub spacenovax-fullstack에 전체 덮어올리기
 3. Render Manual Deploy
-4. 접속: https://spacenovax-fullstack.onrender.com/?v=14
+4. 접속: https://spacenovax-fullstack.onrender.com/?v=15

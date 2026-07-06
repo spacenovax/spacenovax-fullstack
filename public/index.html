@@ -190,14 +190,198 @@
   .ref-stats-v14{grid-template-columns:1fr}
 }
 
+
+/* v15 final UI overhaul */
+.app{max-width:520px;padding:14px 10px 104px}
+.top{margin-bottom:14px}
+.brand h1{font-size:31px}
+.brand p{font-size:16px}
+.symbol{width:76px;height:76px}
+.phase{font-size:17px;padding:14px 20px}
+.glass{border-color:#586eff99;box-shadow:0 22px 80px #000d,inset 0 0 40px #178dff18}
+
+/* Profile */
+.profile{display:none}
+.v15-profile{display:grid;grid-template-columns:76px 1fr 1.35fr;align-items:center;gap:16px;padding:16px;margin-bottom:14px}
+.v15-avatar{width:72px;height:72px;border-radius:50%;background:radial-gradient(circle at 50% 38%,#000 0 24%,#8d35ff 26% 32%,#eaffff 33% 56%,#1b2a77 57%);border:2px solid #34efff;box-shadow:0 0 24px #34efff}
+.v15-user strong{display:block;font-size:20px}
+.v15-user span{display:inline-block;margin-top:6px;background:#7e43ff66;border-radius:99px;padding:5px 10px;font-weight:900}
+.v15-exp span{color:#c2caea}.v15-exp b{float:right}
+
+/* Hero */
+.hero{display:none}
+.v15-hero{position:relative;height:545px;overflow:hidden;margin-bottom:14px;background:radial-gradient(circle at 68% 44%,#1b62ff2e,transparent 44%),linear-gradient(180deg,#061026,#030714);border-radius:24px}
+.v15-stars-layer{position:absolute;inset:0;background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(#34efff 1px,transparent 1px),radial-gradient(#df42ff 1px,transparent 1px);background-size:26px 26px,67px 67px,103px 103px;opacity:.28;animation:v15Star 8s ease-in-out infinite alternate}
+@keyframes v15Star{to{opacity:.52;filter:brightness(1.4)}}
+.v15-planet{position:absolute;left:-92px;bottom:52px;width:255px;height:255px;border-radius:50%;background:radial-gradient(circle at 33% 28%,#ffffff,#5ee9ff 14%,#2271c9 38%,#061332 66%,#01040a 92%);box-shadow:0 0 72px #178dff, inset -28px -30px 40px #000b}
+.v15-planet:after{content:"";position:absolute;inset:18px;border-radius:50%;background:linear-gradient(140deg,transparent 25%,#ffffff20 32%,transparent 42%,#06133244 62%,transparent);filter:blur(2px)}
+.v15-moon{position:absolute;left:214px;top:216px;width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 35% 28%,#e6d0ff,#5d1c9f 48%,#130720 80%);box-shadow:0 0 28px #d93cffaa}
+.v15-phase{right:18px;top:18px;font-size:18px;z-index:8}
+.v15-balance{position:absolute;left:18px;top:36px;z-index:6}
+.v15-balance label{letter-spacing:.18em;color:#c9d5ff;font-weight:900}
+.v15-balance h2{font-size:42px;line-height:1;margin:12px 0 4px;text-shadow:0 0 24px #ffffff99}
+.v15-balance p{font-size:28px;font-weight:1000;color:#34efff;margin:0}
+.usd{font-size:15px}
+
+/* Bigger centered ship */
+.v15-ship{position:absolute;right:12px;top:185px;width:330px;height:190px;z-index:4;filter:drop-shadow(0 0 34px #34efff);transform:rotate(-10deg);animation:v15Ship 3.5s ease-in-out infinite}
+@keyframes v15Ship{50%{transform:rotate(-10deg) translateY(-10px) translateX(-6px)}}
+.v15-ship-body{position:absolute;left:76px;top:68px;width:190px;height:56px;border-radius:55% 45% 45% 55%;background:linear-gradient(90deg,#f6fcff,#8ea0c5 28%,#1a2350 64%,#050914);border:1px solid #ffffff99;box-shadow:inset 0 0 12px #34efff}
+.v15-ship-nose{position:absolute;right:16px;top:62px;width:105px;height:68px;background:linear-gradient(90deg,#222b5c,#d9fbff);clip-path:polygon(0 0,100% 50%,0 100%)}
+.v15-wing{position:absolute;background:linear-gradient(135deg,#fff,#178dff 45%,#1a0c61);border:1px solid #ffffff88}
+.v15-wing.top{left:130px;top:20px;width:120px;height:66px;clip-path:polygon(0 100%,100% 0,76% 100%)}
+.v15-wing.bottom{left:108px;bottom:10px;width:146px;height:62px;clip-path:polygon(0 0,100% 100%,76% 0)}
+.v15-engine{position:absolute;left:40px;width:64px;height:28px;border-radius:50%;background:#050612;border:1px solid #87f8ff}
+.v15-engine.e1{top:58px}.v15-engine.e2{bottom:58px}
+.v15-flame{position:absolute;left:-62px;top:66px;width:140px;height:48px;border-radius:50%;background:linear-gradient(90deg,#0a56ff,#34efff,#fff,#df42ff,transparent);animation:v15Flame .16s infinite alternate}
+@keyframes v15Flame{to{opacity:.72;transform:scaleX(1.22) scaleY(1.1)}}
+.v15-ship small{position:absolute;left:178px;top:88px;color:#34efff;font-size:20px;font-weight:1000;text-shadow:0 0 12px #34efff}
+
+.v15-particle{position:absolute;color:#38ffd0;font-weight:1000;font-size:20px;text-shadow:0 0 18px #34efff;z-index:7;animation:v15Particle 3.8s ease-in-out infinite}
+.v15-particle.p1{right:72px;top:122px}
+.v15-particle.p2{right:62px;bottom:142px;animation-delay:1.5s}
+@keyframes v15Particle{0%,100%{opacity:.2;transform:translateY(22px)}45%{opacity:1;transform:translateY(-10px)}}
+.v15-gems{position:absolute;right:16px;bottom:122px;width:160px;height:85px;background:radial-gradient(circle at 20% 50%,#b85cff 0 4px,transparent 5px),radial-gradient(circle at 60% 30%,#34efff 0 5px,transparent 6px),radial-gradient(circle at 84% 62%,#fff 0 4px,transparent 5px);filter:drop-shadow(0 0 12px #7e43ff);opacity:.9}
+
+.v15-today{position:absolute;left:132px;bottom:80px;width:280px;display:flex;align-items:center;gap:18px;padding:16px 18px;border-radius:20px;z-index:8;background:#061027dd}
+.v15-today .pickaxe{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:#23105b;border:1px solid #a85cff;box-shadow:0 0 24px #7e43ff;font-size:30px}
+.v15-today span{font-size:18px;color:#fff}.v15-today b{display:block;font-size:25px;color:#38ffd0;margin-top:6px}
+.v15-boost{position:absolute;left:88px;right:70px;bottom:18px;display:grid;grid-template-columns:1fr 1fr 1fr;z-index:7;overflow:hidden}
+.v15-boost div{padding:12px;text-align:center;border-right:1px solid #ffffff22}.v15-boost div:last-child{border-right:0}
+.v15-boost span{display:block;color:#dce4ff}.v15-boost b{display:block;color:#34efff;font-size:22px;margin-top:4px}
+
+/* Mining cards */
+.mining-grid{display:none}
+.v15-mining-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.v15-timer,.v15-reward{min-height:190px;padding:18px;border-radius:22px}
+.v15-timer{background:radial-gradient(circle at 50% 90%,#13ff7a33,transparent 44%),#061026dd;text-align:center}
+.v15-timer .ready{color:#38ffd0;font-size:19px;font-weight:1000}
+.v15-timer strong{display:block;font-size:44px;line-height:1;margin:12px 0}
+.v15-reward{display:grid;grid-template-columns:74px 1fr;gap:16px;align-items:center}
+.v15-reward .diamond{width:74px;height:74px;border-radius:50%;display:grid;place-items:center;font-size:36px;background:#25105d;box-shadow:0 0 26px #7e43ff}
+.v15-reward span{font-size:20px}.v15-reward b{display:block;font-size:38px}.v15-reward small{font-size:19px}.rewardbar{grid-column:1/3;height:10px;border-radius:99px;background:linear-gradient(90deg,#df42ff,#34efff);box-shadow:0 0 16px #7e43ff}
+
+/* Quick buttons */
+.v15-action-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:14px}
+.v15-quick{border:1px solid #586eff88;background:#071026dd;border-radius:18px;color:white;padding:13px 8px;font-size:28px;min-height:88px;box-shadow:0 0 18px #178dff22}
+.v15-quick span{display:block;font-size:14px;margin-top:8px}
+.v15-main-actions{display:grid;grid-template-columns:1fr 1fr;gap:14px}.v15-main-actions .act{height:88px;min-height:88px}
+.v15-meta{margin-bottom:4px}
+
+/* Fix bottom nav */
+.nav{max-width:520px;min-height:82px;padding-bottom:max(10px,env(safe-area-inset-bottom));align-items:center}
+.nav button{font-size:12px}
+
+@media(max-width:430px){
+  .app{max-width:100%;padding-left:8px;padding-right:8px}
+  .v15-profile{grid-template-columns:62px 1fr;gap:12px}
+  .v15-exp{grid-column:1/3}
+  .v15-avatar{width:60px;height:60px}
+  .v15-hero{height:515px}
+  .v15-balance h2{font-size:35px}
+  .v15-balance p{font-size:24px}
+  .v15-ship{right:-52px;top:190px;width:300px;transform:rotate(-10deg) scale(.86)}
+  @keyframes v15Ship{50%{transform:rotate(-10deg) scale(.86) translateY(-10px) translateX(-6px)}}
+  .v15-planet{left:-100px;bottom:76px;width:230px;height:230px}
+  .v15-today{left:78px;right:16px;width:auto;bottom:88px}
+  .v15-boost{left:42px;right:32px}
+  .v15-mining-grid{grid-template-columns:1fr}
+  .v15-action-grid{grid-template-columns:repeat(3,1fr)}
+  .v15-main-actions{grid-template-columns:1fr}
+}
+
 </style></head><body><div class="bg"></div><div class="meteor m1"></div><div class="meteor m2"></div><div class="meteor m3"></div><div class="particles"></div><main class="app">
 <header class="top"><div class="brand"><div class="symbol"><b>X</b><small>SPNX</small></div><div><h1>SpaceNovaX</h1><p>Explore. Earn. Beyond.</p></div></div><button class="phase">🚀 <span id="phaseName">Genesis Launch</span></button></header>
 <section id="home" class="page active">
-<div class="profile glass"><div class="astro"></div><div class="badge"></div><div><div class="rank" id="rankTitle"><b>Lv.7</b> Captain</div><div class="role">Space Explorer</div><div class="exp-row"><span>Experience</span><b id="expText">850 / 1000 EXP</b></div><div class="expbar"><i id="expbar"></i></div></div></div>
-<div class="hero glass"><div class="hero-art"><div class="earth"></div><div class="phase-chip" id="phaseChip"><span class="phase-ring"></span> Phase 1</div><div class="float a">+0.000032</div><div class="float b">+0.000018</div><div class="float c">+0.000041</div><div class="balance"><label>TOTAL BALANCE</label><h2 id="balance" class="count-live">15,250.000000</h2><p>SPNX Points</p><div class="usd">≈ $18.43 USD</div></div><div class="today"><span>Today’s Mining</span><b>+<em id="daily">37.500000</em> SPNX</b><i>⌁</i></div><div class="ship"><div class="sbody"></div><div class="snose"></div><div class="wing t"></div><div class="wing b"></div><div class="engine e1"></div><div class="engine e2"></div><div class="flame"></div><div class="spark s1"></div><div class="spark s2"></div><div class="spark s3"></div><div class="shipx">X</div><small>SPNX</small></div></div></div>
-<div class="mining-grid"><div class="timer glass"><div class="ready" id="statusText">MINING READY</div><strong id="timer">24:00:00</strong><small>Time Remaining</small><div class="progress"><i id="bar"></i></div><div class="next"><div><small>Next Reward</small><br><b id="nextReward">37.500000 SPNX</b></div><div class="gift">🎁</div></div></div><div class="stats"><div class="stat glass"><div class="ico">💎</div><div><span>Daily Reward</span><b id="phaseReward">37.500000</b><small>SPNX</small></div></div><div class="stat glass"><div class="ico">🚀</div><div><span>Mining Speed</span><b id="speed">1.562500</b><small>SPNX / hr</small></div></div><div class="stat glass"><div class="ico">⭐</div><div><span>Level Bonus</span><b id="levelBonus">+20%</b><small>Rewards</small></div></div><div class="stat glass"><div class="ico">👥</div><div><span>Referral Bonus</span><b id="refBonus">+5%</b><small>On Rewards</small></div></div></div></div>
-<div class="actions"><button class="act" id="mineBtn">🚀 START MINING<span>Begin your journey</span></button><button class="act secondary" id="claimBtn">🎁 CLAIM REWARDS<span>Collect your earnings</span></button></div>
-<div class="meta glass"><div><span>Halving in</span><b>13D 08:45:32</b></div><div><span>Total Miners</span><b>125,368</b></div><div><span>Total SPNX Mined</span><b>8,452,368.2500</b></div></div>
+<div class="v15-profile glass">
+  <div class="v15-avatar"></div>
+  <div class="v15-user">
+    <strong>Space Explorer</strong>
+    <span>Lv.7 Captain</span>
+  </div>
+  <div class="v15-exp">
+    <div><span>Experience</span><b id="expText">850 / 1000 EXP</b></div>
+    <div class="expbar"><i id="expbar"></i></div>
+  </div>
+</div>
+
+<div class="v15-hero glass">
+  <div class="v15-stars-layer"></div>
+  <div class="v15-planet"></div>
+  <div class="v15-moon"></div>
+  <div class="phase-chip v15-phase" id="phaseChip"><span class="phase-ring"></span> Phase 1</div>
+
+  <div class="v15-balance">
+    <label>TOTAL BALANCE</label>
+    <h2 id="balance" class="count-live">15,250.000000</h2>
+    <p>SPNX Points</p>
+    <div class="usd">≈ $18.43 USD</div>
+  </div>
+
+  <div class="v15-ship">
+    <div class="v15-ship-body"></div>
+    <div class="v15-ship-nose"></div>
+    <div class="v15-wing top"></div>
+    <div class="v15-wing bottom"></div>
+    <div class="v15-engine e1"></div>
+    <div class="v15-engine e2"></div>
+    <div class="v15-flame"></div>
+    <small>SPNX</small>
+  </div>
+
+  <div class="v15-particle p1">+0.000032 💎</div>
+  <div class="v15-particle p2">+0.000041</div>
+  <div class="v15-gems"></div>
+
+  <div class="v15-today glass">
+    <div class="pickaxe">⛏️</div>
+    <div>
+      <span>Today’s Mining</span>
+      <b>+<em id="daily">45.000000</em> SPNX</b>
+    </div>
+  </div>
+
+  <div class="v15-boost glass">
+    <div><span>Mining Speed</span><b>1.25x</b></div>
+    <div><span>Miners</span><b>86</b></div>
+    <div><span>Power</span><b>2.80x</b></div>
+  </div>
+</div>
+
+<div class="v15-mining-grid">
+  <div class="v15-timer glass">
+    <div class="ready" id="statusText">MINING READY</div>
+    <strong id="timer">24:00:00</strong>
+    <small>Time Remaining</small>
+    <div class="progress"><i id="bar"></i></div>
+    <div class="next"><div><small>Next Reward</small><br><b id="nextReward">45.000000 SPNX</b></div><div class="gift">🎁</div></div>
+  </div>
+
+  <div class="v15-reward glass">
+    <div class="diamond">💎</div>
+    <div><span>Daily Reward</span><b id="phaseReward">30.000000</b><small>SPNX</small></div>
+    <div class="rewardbar"></div>
+  </div>
+</div>
+
+<div class="v15-action-grid">
+  <button class="v15-quick">🚀<span>Boost</span></button>
+  <button class="v15-quick">👥<span>Team</span></button>
+  <button class="v15-quick">📋<span>Tasks</span></button>
+  <button class="v15-quick">🛒<span>Shop</span></button>
+  <button class="v15-quick">⬆️<span>Upgrade</span></button>
+</div>
+
+<div class="actions v15-main-actions">
+  <button class="act" id="mineBtn">🚀 START MINING<span>Begin your journey</span></button>
+  <button class="act secondary" id="claimBtn">🎁 CLAIM REWARDS<span>Collect your earnings</span></button>
+</div>
+
+<div class="meta glass v15-meta">
+  <div><span>Halving in</span><b>13D 08:45:32</b></div>
+  <div><span>Total Miners</span><b>125,368</b></div>
+  <div><span>Total SPNX Mined</span><b>8,452,368.2500</b></div>
+</div>
 </section>
 <section id="mining" class="page">
 <div class="section glass mining-premium">
@@ -418,4 +602,12 @@ function shareTelegram(){
   const text = encodeURIComponent("Join SpaceNovaX and mine SPNX Points with me!");
   window.open(`https://t.me/share/url?url=${url}&text=${text}`,"_blank");
 }
+
+/* v15 home patch */
+const __oldRenderV15 = render;
+render = function(){
+  __oldRenderV15();
+  const rankBal = document.getElementById("rankBal");
+  if(rankBal && me) rankBal.textContent = Number(me.balance||0).toLocaleString(undefined,{maximumFractionDigits:0})+" SPNX";
+};
 </script></body></html>
