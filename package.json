@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v16-centered-ship-ui",
-  "version": "16.0.0",
-  "description": "SpaceNovaX v16 centered spaceship final UI",
+  "name": "spacenovax-fullstack-v17-final-polish-ui",
+  "version": "17.0.0",
+  "description": "SpaceNovaX v17 final polish UI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
