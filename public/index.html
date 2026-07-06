@@ -2415,6 +2415,204 @@ html, body{
   overflow-x:hidden!important;
 }
 
+
+/* v41 responsive header fix: desktop and mobile separated */
+.brand:after{
+  content:"v41";
+  margin-left:8px;
+  font-size:12px;
+  background:#7e43ff77;
+  border:1px solid #b86cff;
+  border-radius:10px;
+  padding:2px 7px;
+  font-weight:1000;
+}
+
+/* Base/Desktop header */
+.top{
+  display:grid!important;
+  grid-template-columns:76px minmax(0,1fr) auto!important;
+  grid-template-areas:"logo brand phase"!important;
+  align-items:center!important;
+  gap:14px!important;
+  width:100%!important;
+  max-width:100%!important;
+  overflow:visible!important;
+  margin:0 auto 16px!important;
+  padding:0!important;
+}
+
+.symbol{
+  grid-area:logo!important;
+  width:76px!important;
+  height:76px!important;
+  min-width:76px!important;
+  justify-self:start!important;
+}
+
+.brand{
+  grid-area:brand!important;
+  min-width:0!important;
+  overflow:visible!important;
+  text-align:left!important;
+}
+
+.brand h1{
+  font-size:34px!important;
+  line-height:1.02!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+  text-overflow:clip!important;
+  letter-spacing:-.3px!important;
+}
+
+.brand p{
+  font-size:17px!important;
+  line-height:1.15!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+  text-overflow:clip!important;
+}
+
+.phase{
+  grid-area:phase!important;
+  justify-self:end!important;
+  align-self:center!important;
+  min-width:190px!important;
+  max-width:none!important;
+  width:auto!important;
+  padding:14px 22px!important;
+  font-size:16px!important;
+  line-height:1.1!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+  text-overflow:clip!important;
+  border-radius:18px!important;
+  margin:0!important;
+}
+
+/* Tablet / medium screens: still one line, smaller */
+@media(min-width:769px) and (max-width:980px){
+  .top{
+    grid-template-columns:68px minmax(0,1fr) auto!important;
+    gap:12px!important;
+  }
+  .symbol{
+    width:68px!important;
+    height:68px!important;
+    min-width:68px!important;
+  }
+  .brand h1{
+    font-size:30px!important;
+  }
+  .brand p{
+    font-size:15px!important;
+  }
+  .phase{
+    min-width:168px!important;
+    padding:12px 18px!important;
+    font-size:14px!important;
+  }
+}
+
+/* Mobile: two-line header only here */
+@media(max-width:768px){
+  .app{
+    padding-left:8px!important;
+    padding-right:8px!important;
+    max-width:100%!important;
+  }
+
+  .top{
+    display:grid!important;
+    grid-template-columns:62px minmax(0,1fr)!important;
+    grid-template-areas:
+      "logo brand"
+      "phase phase"!important;
+    gap:8px 10px!important;
+    align-items:center!important;
+    margin-bottom:14px!important;
+    padding:2px 0 0!important;
+    overflow:visible!important;
+  }
+
+  .symbol{
+    grid-area:logo!important;
+    width:62px!important;
+    height:62px!important;
+    min-width:62px!important;
+  }
+
+  .symbol b{font-size:22px!important}
+  .symbol small{font-size:9px!important}
+
+  .brand{
+    grid-area:brand!important;
+    min-width:0!important;
+    overflow:visible!important;
+    text-align:left!important;
+  }
+
+  .brand h1{
+    font-size:28px!important;
+    line-height:1.02!important;
+    letter-spacing:-.4px!important;
+    white-space:nowrap!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+  }
+
+  .brand p{
+    font-size:14px!important;
+    line-height:1.15!important;
+    white-space:nowrap!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+  }
+
+  .phase{
+    grid-area:phase!important;
+    justify-self:center!important;
+    width:auto!important;
+    min-width:180px!important;
+    max-width:none!important;
+    padding:10px 20px!important;
+    border-radius:16px!important;
+    font-size:14px!important;
+    line-height:1.1!important;
+    white-space:nowrap!important;
+    overflow:visible!important;
+    text-overflow:clip!important;
+    margin-top:0!important;
+  }
+}
+
+/* Extra narrow phones */
+@media(max-width:370px){
+  .top{
+    grid-template-columns:54px minmax(0,1fr)!important;
+    gap:7px 8px!important;
+  }
+  .symbol{
+    width:54px!important;
+    height:54px!important;
+    min-width:54px!important;
+  }
+  .symbol b{font-size:19px!important}
+  .symbol small{font-size:8px!important}
+  .brand h1{font-size:24px!important}
+  .brand p{font-size:12px!important}
+  .phase{
+    min-width:164px!important;
+    font-size:13px!important;
+    padding:9px 17px!important;
+  }
+}
+
+html,body{
+  overflow-x:hidden!important;
+}
+
 </style></head><body><div class="bg"></div><div class="meteor m1"></div><div class="meteor m2"></div><div class="meteor m3"></div><div class="particles"></div><main class="app">
 <header class="top"><div class="brand"><div class="symbol"><b>X</b><small>SPNX</small></div><div><h1>SpaceNovaX</h1><p>Explore. Earn. Beyond.</p></div></div><button class="phase">🚀 <span id="phaseName">Genesis Launch</span></button></header>
 <section id="home" class="page active">

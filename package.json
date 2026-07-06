@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v40-two-line-header",
-  "version": "40.0.0",
-  "description": "SpaceNovaX v40 two-line mobile header",
+  "name": "spacenovax-fullstack-v41-responsive-header-fix",
+  "version": "41.0.0",
+  "description": "SpaceNovaX v41 responsive desktop and mobile header fix",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
