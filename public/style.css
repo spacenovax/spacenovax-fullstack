@@ -2026,3 +2026,124 @@
   .v15-today b,.v15-today b em{font-size:8px!important}
   .v15-boost{left:28px!important;right:28px!important;bottom:18px!important}
 }
+
+/* v32 background polish */
+.brand:after{content:"v32";margin-left:8px;font-size:13px;background:#7e43ff77;border:1px solid #b86cff;border-radius:10px;padding:3px 8px;font-weight:1000}
+
+/* Deep premium background: more space, still calm */
+.v15-hero{
+  height:590px!important;
+  background:
+    radial-gradient(ellipse at 57% 50%,rgba(52,239,255,.13),transparent 31%),
+    radial-gradient(ellipse at 72% 35%,rgba(223,66,255,.11),transparent 28%),
+    radial-gradient(ellipse at 18% 74%,rgba(23,141,255,.12),transparent 31%),
+    linear-gradient(180deg,#030713 0%,#02040b 100%)!important;
+}
+.v18-nebula{opacity:.38!important;filter:blur(24px)!important}
+.v24-starfield{opacity:.55!important}
+.v24-dust{opacity:.16!important;background-size:117px 91px!important}
+.v19-stars{opacity:.42!important}
+
+/* subtle extra nebula in empty center/top */
+.v32-deep-nebula{
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    radial-gradient(ellipse at 62% 32%,rgba(82,119,255,.13),transparent 22%),
+    radial-gradient(ellipse at 72% 58%,rgba(151,47,255,.11),transparent 26%),
+    radial-gradient(ellipse at 38% 46%,rgba(45,226,255,.07),transparent 25%);
+  filter:blur(18px);
+  opacity:.58;
+  animation:v32NebulaDrift 14s ease-in-out infinite alternate;
+}
+@keyframes v32NebulaDrift{
+  to{transform:translateX(-8px) translateY(10px) scale(1.04);opacity:.72}
+}
+
+/* varied, non-grid random stars */
+.v32-random-stars{
+  position:absolute;left:0;top:0;width:2px;height:2px;z-index:2;pointer-events:none;border-radius:50%;
+  background:#fff;
+  box-shadow:
+    24px 64px 0 .2px #fff,
+    62px 186px 0 1.2px #35efff,
+    103px 402px 0 .4px #fff,
+    148px 122px 0 .8px #a875ff,
+    191px 322px 0 0 #fff,
+    226px 76px 0 1.4px #fff,
+    264px 468px 0 .5px #35efff,
+    308px 210px 0 .2px #fff,
+    347px 52px 0 .9px #a875ff,
+    386px 376px 0 .3px #fff,
+    421px 158px 0 1.1px #35efff,
+    467px 442px 0 .4px #fff,
+    512px 278px 0 .8px #fff,
+    538px 92px 0 .3px #a875ff,
+    74px 514px 0 .6px #fff,
+    174px 246px 0 .2px #35efff,
+    292px 336px 0 1.3px #fff,
+    402px 496px 0 .2px #a875ff,
+    493px 34px 0 .5px #fff;
+  opacity:.62;
+  filter:drop-shadow(0 0 5px #fff);
+  animation:v32StarTwinkle 6.5s ease-in-out infinite alternate;
+}
+.v32-random-stars:before{
+  content:"";position:absolute;left:0;top:0;width:3px;height:3px;border-radius:50%;background:#35efff;
+  box-shadow:
+    41px 288px 0 0 #fff,
+    119px 44px 0 .7px #35efff,
+    204px 510px 0 0 #fff,
+    256px 166px 0 .8px #a875ff,
+    331px 418px 0 0 #fff,
+    454px 224px 0 .7px #35efff,
+    526px 374px 0 0 #fff;
+  opacity:.55;
+  animation:v32StarTwinkle 4.4s ease-in-out infinite alternate-reverse;
+}
+@keyframes v32StarTwinkle{
+  from{opacity:.32;filter:brightness(.8) drop-shadow(0 0 2px #fff)}
+  to{opacity:.9;filter:brightness(1.55) drop-shadow(0 0 8px #fff)}
+}
+
+/* meteors: occasional, soft, not distracting */
+.v24-meteor,.v15-hero:before{display:none!important}
+.v32-soft-meteor{
+  position:absolute;z-index:3;right:-150px;height:2px;width:105px;border-radius:99px;opacity:0;pointer-events:none;
+  background:linear-gradient(90deg,#fff,#34efff,transparent);
+  box-shadow:0 0 12px #34efff;
+  transform:rotate(-31deg);
+}
+.v32-soft-meteor.one{top:105px;animation:v32Meteor 33s linear infinite 8s}
+.v32-soft-meteor.two{top:255px;width:78px;animation:v32Meteor 41s linear infinite 23s}
+@keyframes v32Meteor{
+  0%{opacity:0;transform:translate(0,0) rotate(-31deg)}
+  4%{opacity:.7}
+  12%{opacity:0}
+  100%{opacity:0;transform:translate(-760px,430px) rotate(-31deg)}
+}
+
+/* planet moved slightly down and calmer */
+.v15-planet{bottom:198px!important;opacity:.66!important}
+.v15-moon{opacity:.22!important}
+
+/* slight ship presence adjustment from v31 */
+.v26-ship{
+  top:274px!important;
+  width:336px!important;
+  height:218px!important;
+}
+
+/* Today's Mining centered a bit better */
+.v15-today{
+  left:50%!important;
+  bottom:76px!important;
+}
+
+/* mobile */
+@media(max-width:430px){
+  .v15-hero{height:582px!important}
+  .v26-ship{top:282px!important;width:304px!important;height:200px!important}
+  .v15-planet{bottom:198px!important}
+  .v15-today{left:50%!important;bottom:80px!important}
+  .v32-random-stars{transform:scale(.88);transform-origin:top left}
+}

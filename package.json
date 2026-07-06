@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v31-final-polish-ui",
-  "version": "31.0.0",
-  "description": "SpaceNovaX v31 final polish UI",
+  "name": "spacenovax-fullstack-v32-background-polish-ui",
+  "version": "32.0.0",
+  "description": "SpaceNovaX v32 background polish UI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
