@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v22-svg-ship-final",
-  "version": "22.0.0",
-  "description": "SpaceNovaX v22 SVG spaceship final UI",
+  "name": "spacenovax-fullstack-v23-premium-ship-ui",
+  "version": "23.0.0",
+  "description": "SpaceNovaX v23 premium ship UI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

@@ -678,6 +678,29 @@
   .v15-boost{left:28px!important;right:28px!important;bottom:18px!important}
 }
 
+
+/* v23 premium ship UI */
+.brand:after{content:"v23";margin-left:8px;font-size:13px;background:#7e43ff77;border:1px solid #b86cff;border-radius:10px;padding:3px 8px;font-weight:1000}
+.v15-hero{height:595px!important;background:radial-gradient(ellipse at 50% 55%,rgba(52,239,255,.16),transparent 31%),radial-gradient(ellipse at 72% 37%,rgba(223,66,255,.15),transparent 27%),radial-gradient(ellipse at 20% 70%,rgba(23,141,255,.16),transparent 30%),linear-gradient(180deg,#030713 0%,#02040b 100%)!important}
+.v18-nebula{opacity:.48!important;filter:blur(19px)!important}
+.v22-ship{left:52%!important;top:258px!important;width:400px!important;height:230px!important;transform:translateX(-50%) rotate(-8deg) perspective(900px) rotateX(8deg)!important;filter:drop-shadow(0 0 32px #34efff) drop-shadow(0 0 34px #7e43ff)!important;animation:v23ShipFloat 3.2s ease-in-out infinite!important}
+@keyframes v23ShipFloat{0%,100%{transform:translateX(-50%) rotate(-8deg) perspective(900px) rotateX(8deg) translateY(0)}50%{transform:translateX(-50%) rotate(-8deg) perspective(900px) rotateX(8deg) translateY(-9px)}}
+.v22-ship-svg{overflow:visible!important}.v23-ship-main{transform-origin:260px 150px;filter:contrast(1.06) brightness(1.05)}
+.v22-flame{filter:drop-shadow(0 0 18px #34efff) drop-shadow(0 0 26px #7e43ff)}.v22-flame-inner{filter:drop-shadow(0 0 12px #fff)}
+.v22-ship text{paint-order:stroke;stroke:#071026;stroke-width:2px;letter-spacing:1px}
+.v15-today{width:132px!important;min-height:36px!important;bottom:83px!important;padding:5px 7px!important;gap:6px!important;border-radius:12px!important;background:rgba(3,7,18,.70)!important;border-color:#9b42ff88!important;z-index:12!important;transform:translateX(-50%) scale(.92)!important}
+.v15-today .pickaxe{width:26px!important;height:26px!important;font-size:13px!important}.v15-today span{font-size:9px!important}.v15-today b,.v15-today b em{font-size:11.5px!important;line-height:1.02!important}
+.v15-planet{width:158px!important;height:158px!important;left:-58px!important;bottom:148px!important;opacity:.86!important}
+.v15-moon{width:38px!important;height:38px!important;right:112px!important;top:240px!important;opacity:.35!important;filter:blur(1px)!important;z-index:3!important}
+.v15-particle{font-size:13px!important;opacity:.85!important;animation:v23Particle 3.2s ease-in-out infinite!important}.v15-particle.p1{left:82px!important;top:304px!important}.v15-particle.p2{right:68px!important;bottom:250px!important}
+@keyframes v23Particle{0%{opacity:0;transform:translateY(18px) scale(.95)}35%,70%{opacity:.9}100%{opacity:0;transform:translateY(-22px) scale(1.05)}}
+.v15-gems{right:34px!important;bottom:228px!important;width:110px!important;height:58px!important;opacity:.72!important}
+.v15-boost{bottom:18px!important;left:46px!important;right:46px!important;z-index:9!important}.v15-boost span{font-size:11px!important}.v15-boost b{font-size:16px!important}
+.v19-stars{opacity:.78!important}.v19-stars:before{opacity:.72!important}.v19-stars:after{opacity:.52!important}
+.phase-ring{animation:phaseSpin 2.6s linear infinite,v23Pulse 1.8s ease-in-out infinite alternate!important}@keyframes v23Pulse{to{filter:drop-shadow(0 0 10px #34efff) brightness(1.35)}}
+.symbol{animation:v23LogoPulse 2.7s ease-in-out infinite alternate}@keyframes v23LogoPulse{to{filter:drop-shadow(0 0 22px #34efff) brightness(1.12)}}
+@media(max-width:430px){.v15-hero{height:575px!important}.v22-ship{left:52%!important;top:266px!important;width:350px!important;height:205px!important}.v15-planet{width:148px!important;height:148px!important;left:-56px!important;bottom:156px!important}.v15-moon{width:34px!important;height:34px!important;right:92px!important;top:246px!important}.v15-today{width:122px!important;bottom:88px!important;transform:translateX(-50%) scale(.9)!important}.v15-today .pickaxe{width:24px!important;height:24px!important}.v15-today span{font-size:8.5px!important}.v15-today b,.v15-today b em{font-size:10.5px!important}.v15-boost{left:30px!important;right:30px!important;bottom:18px!important}}
+
 </style></head><body><div class="bg"></div><div class="meteor m1"></div><div class="meteor m2"></div><div class="meteor m3"></div><div class="particles"></div><main class="app">
 <header class="top"><div class="brand"><div class="symbol"><b>X</b><small>SPNX</small></div><div><h1>SpaceNovaX</h1><p>Explore. Earn. Beyond.</p></div></div><button class="phase">🚀 <span id="phaseName">Genesis Launch</span></button></header>
 <section id="home" class="page active">
@@ -736,7 +759,7 @@
       </filter>
     </defs>
 
-    <g class="ship-main">
+    <g class="ship-main v23-ship-main">
       <path d="M260 12 C318 56 356 121 358 205 C323 236 199 236 164 205 C166 121 202 56 260 12 Z"
             fill="url(#shipBody)" stroke="#d9fbff" stroke-width="3"/>
       <path d="M260 31 C292 70 313 121 315 181 C296 200 224 200 205 181 C207 121 228 70 260 31 Z"
