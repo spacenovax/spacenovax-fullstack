@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v36-engraved-emblem-ui",
-  "version": "36.0.0",
-  "description": "SpaceNovaX v36 engraved SPNX emblem UI",
+  "name": "spacenovax-fullstack-v37-meteor-fix-ui",
+  "version": "37.0.0",
+  "description": "SpaceNovaX v37 meteor visibility fix UI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

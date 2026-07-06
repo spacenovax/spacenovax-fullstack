@@ -1931,6 +1931,114 @@
   }
 }
 
+
+/* v37 meteor visibility fix */
+.brand:after{
+  content:"v37";
+  margin-left:8px;
+  font-size:13px;
+  background:#7e43ff77;
+  border:1px solid #b86cff;
+  border-radius:10px;
+  padding:3px 8px;
+  font-weight:1000;
+}
+
+/* disable previous meteor rules that were hidden or too faint */
+.v24-meteor,
+.v32-soft-meteor,
+.v35-meteor,
+.v15-hero:before{
+  display:none!important;
+}
+
+/* visible meteor layer */
+.v37-meteor{
+  position:absolute;
+  z-index:30!important;
+  pointer-events:none;
+  height:3px;
+  border-radius:999px;
+  opacity:0;
+  will-change:transform,opacity;
+  background:linear-gradient(90deg,
+    rgba(255,255,255,1) 0%,
+    rgba(52,239,255,1) 22%,
+    rgba(52,239,255,.65) 52%,
+    rgba(52,239,255,0) 100%);
+  box-shadow:
+    0 0 10px rgba(255,255,255,.9),
+    0 0 18px rgba(52,239,255,.85),
+    0 0 30px rgba(126,67,255,.45);
+}
+
+.v37-meteor.a{
+  top:76px;
+  right:-160px;
+  width:150px;
+  transform:rotate(-31deg);
+  animation:v37MeteorA 5s linear infinite;
+}
+
+.v37-meteor.b{
+  top:178px;
+  right:-140px;
+  width:112px;
+  transform:rotate(-24deg);
+  background:linear-gradient(90deg,
+    rgba(255,255,255,1) 0%,
+    rgba(178,79,255,1) 24%,
+    rgba(178,79,255,.58) 55%,
+    rgba(178,79,255,0) 100%);
+  box-shadow:
+    0 0 10px rgba(255,255,255,.75),
+    0 0 20px rgba(178,79,255,.85);
+  animation:v37MeteorB 5s linear infinite 1.7s;
+}
+
+.v37-meteor.c{
+  top:122px;
+  left:-160px;
+  width:120px;
+  transform:rotate(28deg);
+  animation:v37MeteorC 5s linear infinite 3.3s;
+}
+
+@keyframes v37MeteorA{
+  0%{opacity:0;transform:translate(0,0) rotate(-31deg)}
+  7%{opacity:1}
+  26%{opacity:.15}
+  33%{opacity:0}
+  100%{opacity:0;transform:translate(-780px,420px) rotate(-31deg)}
+}
+@keyframes v37MeteorB{
+  0%{opacity:0;transform:translate(0,0) rotate(-24deg)}
+  8%{opacity:.9}
+  24%{opacity:.15}
+  32%{opacity:0}
+  100%{opacity:0;transform:translate(-650px,310px) rotate(-24deg)}
+}
+@keyframes v37MeteorC{
+  0%{opacity:0;transform:translate(0,0) rotate(28deg)}
+  8%{opacity:.85}
+  25%{opacity:.12}
+  32%{opacity:0}
+  100%{opacity:0;transform:translate(720px,340px) rotate(28deg)}
+}
+
+/* keep UI below meteor but above background */
+.v26-ship{z-index:10!important}
+.v15-today{z-index:13!important}
+.v15-boost{z-index:9!important}
+
+/* mobile visible */
+@media(max-width:430px){
+  .v37-meteor{height:3px}
+  .v37-meteor.a{top:72px;width:132px}
+  .v37-meteor.b{top:160px;width:96px}
+  .v37-meteor.c{top:112px;width:104px}
+}
+
 </style></head><body><div class="bg"></div><div class="meteor m1"></div><div class="meteor m2"></div><div class="meteor m3"></div><div class="particles"></div><main class="app">
 <header class="top"><div class="brand"><div class="symbol"><b>X</b><small>SPNX</small></div><div><h1>SpaceNovaX</h1><p>Explore. Earn. Beyond.</p></div></div><button class="phase">🚀 <span id="phaseName">Genesis Launch</span></button></header>
 <section id="home" class="page active">
