@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v41-responsive-header-fix",
-  "version": "41.0.0",
-  "description": "SpaceNovaX v41 responsive desktop and mobile header fix",
+  "name": "spacenovax-fullstack-v42-force-header-fix",
+  "version": "42.0.0",
+  "description": "SpaceNovaX v42 forced header layout fix",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

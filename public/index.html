@@ -2613,7 +2613,218 @@ html,body{
   overflow-x:hidden!important;
 }
 
-</style></head><body><div class="bg"></div><div class="meteor m1"></div><div class="meteor m2"></div><div class="meteor m3"></div><div class="particles"></div><main class="app">
+
+/* =========================================================
+   v42 FORCE HEADER FIX
+   This block intentionally targets broad selectors and uses
+   high specificity because earlier versions were overridden.
+   ========================================================= */
+
+body.v42-force .top,
+body.v42-force header,
+body.v42-force .header,
+body.v42-force .app > .top {
+  position: relative !important;
+  display: grid !important;
+  grid-template-columns: 78px minmax(0, 1fr) auto !important;
+  grid-template-areas: "logo brand launch" !important;
+  align-items: center !important;
+  gap: 14px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 86px !important;
+  padding: 8px 0 12px !important;
+  margin: 0 auto 14px !important;
+  overflow: visible !important;
+  transform: none !important;
+}
+
+body.v42-force .top .symbol,
+body.v42-force .symbol {
+  grid-area: logo !important;
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  width: 78px !important;
+  height: 78px !important;
+  min-width: 78px !important;
+  max-width: 78px !important;
+  transform: none !important;
+  z-index: 5 !important;
+}
+
+body.v42-force .top .brand,
+body.v42-force .brand {
+  grid-area: brand !important;
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  width: auto !important;
+  transform: none !important;
+  z-index: 5 !important;
+  overflow: visible !important;
+  text-align: left !important;
+}
+
+body.v42-force .brand h1 {
+  display: block !important;
+  font-size: 34px !important;
+  line-height: 1.02 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  letter-spacing: -0.4px !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+body.v42-force .brand p {
+  display: block !important;
+  font-size: 17px !important;
+  line-height: 1.15 !important;
+  margin: 4px 0 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+body.v42-force .phase,
+body.v42-force .top .phase,
+body.v42-force [class*="phase"] {
+  grid-area: launch !important;
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  justify-self: end !important;
+  align-self: center !important;
+  min-width: 190px !important;
+  width: auto !important;
+  max-width: none !important;
+  height: auto !important;
+  padding: 14px 22px !important;
+  margin: 0 !important;
+  transform: none !important;
+  font-size: 16px !important;
+  line-height: 1.1 !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  z-index: 6 !important;
+}
+
+/* Replace pseudo version badge so it never overlays the launch button */
+body.v42-force .brand:after {
+  content: "v42" !important;
+  display: inline-flex !important;
+  vertical-align: middle !important;
+  margin-left: 8px !important;
+  font-size: 12px !important;
+  background: #7e43ff77 !important;
+  border: 1px solid #b86cff !important;
+  border-radius: 10px !important;
+  padding: 2px 7px !important;
+  font-weight: 1000 !important;
+  transform: none !important;
+}
+
+/* Mobile: two-line layout */
+@media (max-width: 768px) {
+  body.v42-force .app {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    max-width: 100% !important;
+  }
+
+  body.v42-force .top,
+  body.v42-force header,
+  body.v42-force .header,
+  body.v42-force .app > .top {
+    grid-template-columns: 62px minmax(0, 1fr) !important;
+    grid-template-areas:
+      "logo brand"
+      "launch launch" !important;
+    gap: 8px 10px !important;
+    min-height: 124px !important;
+    padding: 4px 0 10px !important;
+    margin-bottom: 14px !important;
+  }
+
+  body.v42-force .symbol {
+    width: 62px !important;
+    height: 62px !important;
+    min-width: 62px !important;
+    max-width: 62px !important;
+  }
+
+  body.v42-force .symbol b { font-size: 22px !important; }
+  body.v42-force .symbol small { font-size: 9px !important; }
+
+  body.v42-force .brand h1 {
+    font-size: 28px !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.4px !important;
+  }
+
+  body.v42-force .brand p {
+    font-size: 14px !important;
+    line-height: 1.15 !important;
+  }
+
+  body.v42-force .phase,
+  body.v42-force [class*="phase"] {
+    justify-self: center !important;
+    min-width: 190px !important;
+    max-width: none !important;
+    width: auto !important;
+    padding: 10px 22px !important;
+    font-size: 14px !important;
+    border-radius: 16px !important;
+  }
+}
+
+/* Small phones */
+@media (max-width: 370px) {
+  body.v42-force .top,
+  body.v42-force header,
+  body.v42-force .header,
+  body.v42-force .app > .top {
+    grid-template-columns: 54px minmax(0, 1fr) !important;
+    min-height: 114px !important;
+    gap: 7px 8px !important;
+  }
+
+  body.v42-force .symbol {
+    width: 54px !important;
+    height: 54px !important;
+    min-width: 54px !important;
+    max-width: 54px !important;
+  }
+
+  body.v42-force .brand h1 { font-size: 24px !important; }
+  body.v42-force .brand p { font-size: 12px !important; }
+
+  body.v42-force .phase,
+  body.v42-force [class*="phase"] {
+    min-width: 170px !important;
+    font-size: 13px !important;
+    padding: 9px 18px !important;
+  }
+}
+
+html, body {
+  overflow-x: hidden !important;
+}
+
+</style></head><body class="v42-force"><div class="bg"></div><div class="meteor m1"></div><div class="meteor m2"></div><div class="meteor m3"></div><div class="particles"></div><main class="app">
 <header class="top"><div class="brand"><div class="symbol"><b>X</b><small>SPNX</small></div><div><h1>SpaceNovaX</h1><p>Explore. Earn. Beyond.</p></div></div><button class="phase">🚀 <span id="phaseName">Genesis Launch</span></button></header>
 <section id="home" class="page active">
 <div class="v15-profile glass">
@@ -3167,6 +3378,42 @@ render = function(){
   }else{
     initSpaceCanvas();
   }
+})();
+</script>
+
+
+<script>
+(function(){
+  function forceHeaderV42(){
+    document.body.classList.add('v42-force');
+    var top = document.querySelector('.top') || document.querySelector('header') || document.querySelector('.header');
+    var brand = document.querySelector('.brand');
+    var phase = document.querySelector('.phase') || document.querySelector('[class*="phase"]');
+    var symbol = document.querySelector('.symbol');
+
+    if(phase){
+      phase.textContent = phase.textContent.replace('GenesisLaunch','Genesis Launch').replace('Genesis La...','Genesis Launch');
+      if(!/Genesis Launch/i.test(phase.textContent)){
+        phase.innerHTML = '🚀 Genesis Launch';
+      }
+    }
+
+    if(top && phase && !top.contains(phase)){
+      top.appendChild(phase);
+    }
+    if(top && symbol && !top.contains(symbol)){
+      top.insertBefore(symbol, top.firstChild);
+    }
+    if(top && brand && !top.contains(brand)){
+      top.insertBefore(brand, phase || null);
+    }
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', forceHeaderV42);
+  } else {
+    forceHeaderV42();
+  }
+  setTimeout(forceHeaderV42, 500);
 })();
 </script>
 
