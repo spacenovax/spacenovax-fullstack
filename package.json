@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v37-meteor-fix-ui",
-  "version": "37.0.0",
-  "description": "SpaceNovaX v37 meteor visibility fix UI",
+  "name": "spacenovax-fullstack-v38-canvas-meteor-ui",
+  "version": "38.0.0",
+  "description": "SpaceNovaX v38 canvas meteor background UI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

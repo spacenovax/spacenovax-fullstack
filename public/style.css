@@ -2822,3 +2822,70 @@
   .v37-meteor.b{top:160px;width:96px}
   .v37-meteor.c{top:112px;width:104px}
 }
+
+/* v38 canvas meteor background */
+.brand:after{
+  content:"v38";
+  margin-left:8px;
+  font-size:13px;
+  background:#7e43ff77;
+  border:1px solid #b86cff;
+  border-radius:10px;
+  padding:3px 8px;
+  font-weight:1000;
+}
+
+/* CSS meteors disabled. Canvas will render meteors reliably. */
+.v24-meteor,
+.v32-soft-meteor,
+.v35-meteor,
+.v37-meteor,
+.v15-hero:before{
+  display:none!important;
+}
+
+/* Canvas layer inside hero */
+.v15-hero{
+  position:relative!important;
+  overflow:hidden!important;
+}
+.space-canvas{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:3;
+  pointer-events:none;
+  opacity:.95;
+}
+
+/* Keep UI above canvas */
+.v15-balance,
+.v15-phase,
+.v26-ship,
+.v15-today,
+.v15-boost,
+.v15-particle,
+.v15-gems{
+  position:absolute;
+}
+.v15-balance{z-index:20!important}
+.v15-phase{z-index:21!important}
+.v26-ship{z-index:18!important}
+.v15-today{z-index:22!important}
+.v15-boost{z-index:19!important}
+.v15-particle{z-index:19!important}
+.v15-gems{z-index:18!important}
+
+/* Existing background stars can stay subtle */
+.v24-starfield,
+.v32-random-stars,
+.v19-stars{
+  opacity:.30!important;
+}
+.v24-dust{opacity:.08!important}
+
+/* Mobile */
+@media(max-width:430px){
+  .space-canvas{opacity:1}
+}
