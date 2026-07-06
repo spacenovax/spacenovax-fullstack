@@ -2824,7 +2824,247 @@ html, body {
   overflow-x: hidden !important;
 }
 
+
+/* v43 rebuilt header component */
+/* Disable old pseudo badges that caused overlap */
+.brand:after,
+.v43-brand:after{
+  content:none!important;
+  display:none!important;
+}
+
+/* Header rebuilt from HTML, not CSS patch */
+.v43-top{
+  width:100%!important;
+  max-width:100%!important;
+  margin:0 auto 16px!important;
+  padding:0!important;
+  position:relative!important;
+  overflow:visible!important;
+  display:block!important;
+  transform:none!important;
+}
+
+.v43-main-row{
+  width:100%!important;
+  display:grid!important;
+  grid-template-columns:78px minmax(0,1fr) auto!important;
+  grid-template-areas:"logo brand launch"!important;
+  gap:14px!important;
+  align-items:center!important;
+  overflow:visible!important;
+}
+
+.v43-logo{
+  grid-area:logo!important;
+  width:78px!important;
+  height:78px!important;
+  min-width:78px!important;
+  max-width:78px!important;
+  position:relative!important;
+  left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;
+  transform:none!important;
+  z-index:5!important;
+}
+
+.v43-brand{
+  grid-area:brand!important;
+  min-width:0!important;
+  width:auto!important;
+  text-align:left!important;
+  overflow:visible!important;
+  position:relative!important;
+  transform:none!important;
+  z-index:5!important;
+}
+
+.v43-brand h1{
+  margin:0!important;
+  padding:0!important;
+  font-size:34px!important;
+  line-height:1.02!important;
+  letter-spacing:-.4px!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+  text-overflow:clip!important;
+}
+
+.v43-brand p{
+  margin:4px 0 0!important;
+  padding:0!important;
+  font-size:17px!important;
+  line-height:1.15!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+}
+
+.v43-badge{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  vertical-align:middle!important;
+  margin-left:8px!important;
+  transform:translateY(-2px)!important;
+  font-size:12px!important;
+  line-height:1!important;
+  background:#7e43ff77!important;
+  border:1px solid #b86cff!important;
+  border-radius:10px!important;
+  padding:3px 8px!important;
+  font-weight:1000!important;
+  color:#fff!important;
+  text-shadow:none!important;
+}
+
+.v43-launch{
+  grid-area:launch!important;
+  justify-self:end!important;
+  align-self:center!important;
+  min-width:190px!important;
+  width:auto!important;
+  max-width:none!important;
+  position:relative!important;
+  left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;
+  transform:none!important;
+  margin:0!important;
+  padding:14px 22px!important;
+  height:auto!important;
+  border-radius:18px!important;
+  font-size:16px!important;
+  font-weight:900!important;
+  line-height:1.1!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+  text-overflow:clip!important;
+  z-index:6!important;
+}
+
+/* Keep any old phase not inside v43 header from breaking cards */
+.v15-phase{
+  position:absolute!important;
+}
+
+/* Desktop/tall monitor */
+@media(min-width:981px){
+  .v43-main-row{
+    grid-template-columns:82px minmax(0,1fr) auto!important;
+  }
+  .v43-logo{width:82px!important;height:82px!important;min-width:82px!important;max-width:82px!important}
+  .v43-brand h1{font-size:36px!important}
+  .v43-brand p{font-size:18px!important}
+  .v43-launch{min-width:204px!important;font-size:16px!important;padding:14px 24px!important}
+}
+
+/* Tablet */
+@media(min-width:769px) and (max-width:980px){
+  .v43-main-row{
+    grid-template-columns:68px minmax(0,1fr) auto!important;
+    gap:12px!important;
+  }
+  .v43-logo{width:68px!important;height:68px!important;min-width:68px!important;max-width:68px!important}
+  .v43-brand h1{font-size:30px!important}
+  .v43-brand p{font-size:15px!important}
+  .v43-launch{min-width:168px!important;padding:12px 18px!important;font-size:14px!important}
+}
+
+/* Mobile: two-line header */
+@media(max-width:768px){
+  .app{
+    padding-left:8px!important;
+    padding-right:8px!important;
+    max-width:100%!important;
+  }
+
+  .v43-top{
+    margin-bottom:14px!important;
+  }
+
+  .v43-main-row{
+    grid-template-columns:62px minmax(0,1fr)!important;
+    grid-template-areas:
+      "logo brand"
+      "launch launch"!important;
+    gap:8px 10px!important;
+    align-items:center!important;
+  }
+
+  .v43-logo{
+    width:62px!important;
+    height:62px!important;
+    min-width:62px!important;
+    max-width:62px!important;
+  }
+
+  .v43-logo b{font-size:22px!important}
+  .v43-logo small{font-size:9px!important}
+
+  .v43-brand h1{
+    font-size:28px!important;
+    letter-spacing:-.4px!important;
+  }
+
+  .v43-brand p{
+    font-size:14px!important;
+  }
+
+  .v43-badge{
+    font-size:11px!important;
+    padding:2px 7px!important;
+    margin-left:6px!important;
+  }
+
+  .v43-launch{
+    justify-self:center!important;
+    min-width:190px!important;
+    padding:10px 22px!important;
+    font-size:14px!important;
+    border-radius:16px!important;
+  }
+}
+
+/* Small phones */
+@media(max-width:370px){
+  .v43-main-row{
+    grid-template-columns:54px minmax(0,1fr)!important;
+    gap:7px 8px!important;
+  }
+  .v43-logo{
+    width:54px!important;
+    height:54px!important;
+    min-width:54px!important;
+    max-width:54px!important;
+  }
+  .v43-logo b{font-size:19px!important}
+  .v43-logo small{font-size:8px!important}
+  .v43-brand h1{font-size:24px!important}
+  .v43-brand p{font-size:12px!important}
+  .v43-launch{
+    min-width:170px!important;
+    font-size:13px!important;
+    padding:9px 18px!important;
+  }
+}
+
+html,body{overflow-x:hidden!important}
+
 </style></head><body class="v42-force"><div class="bg"></div><div class="meteor m1"></div><div class="meteor m2"></div><div class="meteor m3"></div><div class="particles"></div><main class="app">
+<div class="top v43-top">
+  <div class="v43-main-row">
+    <div class="symbol v43-logo">
+      <b>X</b>
+      <small>SPNX</small>
+    </div>
+
+    <div class="brand v43-brand">
+      <h1>SpaceNovaX <span class="v43-badge">v43</span></h1>
+      <p>Explore. Earn. Beyond.</p>
+    </div>
+
+    <button class="phase v43-launch" type="button">🚀 Genesis Launch</button>
+  </div>
+</div>
+
+
 <header class="top"><div class="brand"><div class="symbol"><b>X</b><small>SPNX</small></div><div><h1>SpaceNovaX</h1><p>Explore. Earn. Beyond.</p></div></div><button class="phase">🚀 <span id="phaseName">Genesis Launch</span></button></header>
 <section id="home" class="page active">
 <div class="v15-profile glass">
@@ -3382,38 +3622,29 @@ render = function(){
 </script>
 
 
+
+
+
 <script>
 (function(){
-  function forceHeaderV42(){
-    document.body.classList.add('v42-force');
-    var top = document.querySelector('.top') || document.querySelector('header') || document.querySelector('.header');
-    var brand = document.querySelector('.brand');
-    var phase = document.querySelector('.phase') || document.querySelector('[class*="phase"]');
-    var symbol = document.querySelector('.symbol');
+  function v43HeaderFix(){
+    var top = document.querySelector('.v43-top');
+    if(!top) return;
 
-    if(phase){
-      phase.textContent = phase.textContent.replace('GenesisLaunch','Genesis Launch').replace('Genesis La...','Genesis Launch');
-      if(!/Genesis Launch/i.test(phase.textContent)){
-        phase.innerHTML = '🚀 Genesis Launch';
-      }
-    }
+    var launch = top.querySelector('.v43-launch');
+    if(launch) launch.innerHTML = '🚀 Genesis Launch';
 
-    if(top && phase && !top.contains(phase)){
-      top.appendChild(phase);
-    }
-    if(top && symbol && !top.contains(symbol)){
-      top.insertBefore(symbol, top.firstChild);
-    }
-    if(top && brand && !top.contains(brand)){
-      top.insertBefore(brand, phase || null);
-    }
+    var badge = top.querySelector('.v43-badge');
+    if(badge) badge.textContent = 'v43';
+
+    // Hide accidental old header launch buttons inside non-v43 top if duplicated
+    document.querySelectorAll('.top:not(.v43-top) .phase').forEach(function(el){
+      if(el.textContent && /Genesis/i.test(el.textContent)) el.style.display = 'none';
+    });
   }
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', forceHeaderV42);
-  } else {
-    forceHeaderV42();
-  }
-  setTimeout(forceHeaderV42, 500);
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', v43HeaderFix);
+  else v43HeaderFix();
+  setTimeout(v43HeaderFix, 300);
 })();
 </script>
 
