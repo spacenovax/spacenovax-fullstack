@@ -2147,3 +2147,229 @@
   .v15-today{left:50%!important;bottom:80px!important}
   .v32-random-stars{transform:scale(.88);transform-origin:top left}
 }
+
+/* v33 SPNX wing final UI */
+.brand:after{
+  content:"v33";
+  margin-left:8px;
+  font-size:13px;
+  background:#7e43ff77;
+  border:1px solid #b86cff;
+  border-radius:10px;
+  padding:3px 8px;
+  font-weight:1000;
+}
+
+/* final balanced hero */
+.v15-hero{
+  height:595px!important;
+  background:
+    radial-gradient(ellipse at 56% 50%,rgba(52,239,255,.14),transparent 31%),
+    radial-gradient(ellipse at 74% 34%,rgba(123,58,255,.13),transparent 28%),
+    radial-gradient(ellipse at 19% 71%,rgba(23,141,255,.14),transparent 31%),
+    linear-gradient(180deg,#030713 0%,#02040b 100%)!important;
+}
+
+/* background polish */
+.v18-nebula{opacity:.44!important;filter:blur(22px)!important}
+.v24-starfield{opacity:.63!important}
+.v24-dust{opacity:.13!important}
+.v19-stars{opacity:.46!important}
+.v32-deep-nebula{opacity:.62!important}
+.v32-random-stars{opacity:.70!important}
+
+/* meteor, soft and rare */
+.v32-soft-meteor.one{
+  animation-duration:36s!important;
+  animation-delay:7s!important;
+  width:96px!important;
+  opacity:.65!important;
+}
+.v32-soft-meteor.two{
+  animation-duration:44s!important;
+  animation-delay:24s!important;
+  width:72px!important;
+  opacity:.50!important;
+}
+
+/* ship: slightly larger, higher, stronger center object */
+.v26-ship{
+  left:52%!important;
+  top:264px!important;
+  width:360px!important;
+  height:230px!important;
+  transform:translateX(-50%) rotate(-15deg) perspective(900px) rotateX(9deg) rotateY(-8deg)!important;
+  filter:drop-shadow(0 0 31px #34efff) drop-shadow(0 0 32px #7e43ff)!important;
+  animation:v33Float 4.6s ease-in-out infinite!important;
+}
+@keyframes v33Float{
+  0%,100%{transform:translateX(-50%) rotate(-15deg) perspective(900px) rotateX(9deg) rotateY(-8deg) translateY(0)}
+  50%{transform:translateX(-50%) rotate(-15deg) perspective(900px) rotateX(9deg) rotateY(-8deg) translateY(-8px)}
+}
+
+/* engine: no flame, only subtle energy glow */
+.mk-flame{display:none!important}
+.v26-engine-particles{
+  top:462px!important;
+  width:112px!important;
+  height:62px!important;
+  opacity:.52!important;
+  background:
+    radial-gradient(circle at 42% 35%,#42f9ff 0 3px,transparent 4px),
+    radial-gradient(circle at 57% 58%,#7e43ff 0 2px,transparent 3px),
+    radial-gradient(circle at 50% 50%,rgba(255,255,255,.8) 0 1px,transparent 2px)!important;
+  filter:drop-shadow(0 0 12px #34efff)!important;
+  animation:v33EngineGlow 2.7s ease-in-out infinite alternate!important;
+}
+@keyframes v33EngineGlow{
+  from{opacity:.32;transform:translateX(-50%) rotate(-15deg) scale(.94)}
+  to{opacity:.68;transform:translateX(-50%) rotate(-15deg) scale(1.06)}
+}
+
+/* SPNX decal: visible, clean, wing aligned */
+.v26-ship text{
+  font-size:19px!important;
+  fill:#2df7ee!important;
+  stroke:#071126!important;
+  stroke-width:1.8px!important;
+  paint-order:stroke!important;
+  opacity:.92!important;
+  letter-spacing:.6px!important;
+  transform:rotate(13deg)!important;
+  transform-origin:500px 294px!important;
+  filter:drop-shadow(0 0 4px rgba(45,247,238,.75))!important;
+}
+
+/* if multiple SPNX text layers exist, keep them consistent */
+.v26-ship text:nth-of-type(1){
+  fill:#041020!important;
+  opacity:.75!important;
+}
+.v26-ship text:nth-of-type(2){
+  fill:#2df7ee!important;
+  opacity:.95!important;
+}
+
+/* Today's Mining: centered below ship */
+.v15-today{
+  left:50%!important;
+  width:116px!important;
+  min-height:32px!important;
+  bottom:74px!important;
+  padding:4px 6px!important;
+  gap:5px!important;
+  border-radius:10px!important;
+  background:rgba(3,7,18,.72)!important;
+  border-color:#9b42ff88!important;
+  transform:translateX(-50%) scale(.88)!important;
+  z-index:13!important;
+}
+.v15-today .pickaxe{
+  width:22px!important;
+  height:22px!important;
+  font-size:11px!important;
+}
+.v15-today span{font-size:7.6px!important}
+.v15-today b,.v15-today b em{
+  font-size:9.3px!important;
+  line-height:1!important;
+}
+
+/* planets balanced */
+.v15-planet{
+  width:112px!important;
+  height:112px!important;
+  left:-44px!important;
+  bottom:194px!important;
+  opacity:.72!important;
+}
+.v15-moon{
+  width:27px!important;
+  height:27px!important;
+  right:105px!important;
+  top:248px!important;
+  opacity:.26!important;
+  filter:blur(1.25px)!important;
+}
+
+/* stats bar */
+.v15-boost{
+  bottom:16px!important;
+  left:44px!important;
+  right:44px!important;
+  z-index:9!important;
+}
+.v15-boost span{font-size:11px!important}
+.v15-boost b{font-size:16px!important}
+
+/* particles */
+.v15-particle{
+  font-size:12px!important;
+  opacity:.72!important;
+}
+.v15-particle.p1{
+  left:88px!important;
+  top:321px!important;
+}
+.v15-particle.p2{
+  right:66px!important;
+  bottom:262px!important;
+}
+.v15-gems{
+  right:34px!important;
+  bottom:247px!important;
+  width:94px!important;
+  height:52px!important;
+  opacity:.64!important;
+}
+
+/* lower cards */
+.v15-mining-grid{margin-top:14px!important}
+.v15-timer,.v15-reward{min-height:165px!important}
+.nav{z-index:999!important}
+
+/* mobile final */
+@media(max-width:430px){
+  .v15-hero{height:586px!important}
+  .v26-ship{
+    left:52%!important;
+    top:272px!important;
+    width:324px!important;
+    height:210px!important;
+  }
+  .v26-engine-particles{
+    top:462px!important;
+    width:96px!important;
+    height:52px!important;
+  }
+  .v26-ship text{
+    font-size:18px!important;
+    transform:rotate(13deg)!important;
+  }
+  .v15-planet{
+    width:106px!important;
+    height:106px!important;
+    left:-42px!important;
+    bottom:198px!important;
+  }
+  .v15-moon{
+    width:24px!important;
+    height:24px!important;
+    right:92px!important;
+    top:254px!important;
+  }
+  .v15-today{
+    left:50%!important;
+    width:108px!important;
+    bottom:78px!important;
+    transform:translateX(-50%) scale(.86)!important;
+  }
+  .v15-today .pickaxe{width:20px!important;height:20px!important}
+  .v15-today span{font-size:7.2px!important}
+  .v15-today b,.v15-today b em{font-size:8.6px!important}
+  .v15-boost{
+    left:28px!important;
+    right:28px!important;
+    bottom:18px!important;
+  }
+}
