@@ -701,6 +701,153 @@
 .symbol{animation:v23LogoPulse 2.7s ease-in-out infinite alternate}@keyframes v23LogoPulse{to{filter:drop-shadow(0 0 22px #34efff) brightness(1.12)}}
 @media(max-width:430px){.v15-hero{height:575px!important}.v22-ship{left:52%!important;top:266px!important;width:350px!important;height:205px!important}.v15-planet{width:148px!important;height:148px!important;left:-56px!important;bottom:156px!important}.v15-moon{width:34px!important;height:34px!important;right:92px!important;top:246px!important}.v15-today{width:122px!important;bottom:88px!important;transform:translateX(-50%) scale(.9)!important}.v15-today .pickaxe{width:24px!important;height:24px!important}.v15-today span{font-size:8.5px!important}.v15-today b,.v15-today b em{font-size:10.5px!important}.v15-boost{left:30px!important;right:30px!important;bottom:18px!important}}
 
+
+/* v24 animation polish UI */
+.brand:after{content:"v24";margin-left:8px;font-size:13px;background:#7e43ff77;border:1px solid #b86cff;border-radius:10px;padding:3px 8px;font-weight:1000}
+
+/* More premium living background */
+.v15-hero{
+  height:595px!important;
+  background:
+    radial-gradient(ellipse at 54% 52%,rgba(52,239,255,.16),transparent 31%),
+    radial-gradient(ellipse at 78% 36%,rgba(223,66,255,.18),transparent 27%),
+    radial-gradient(ellipse at 19% 72%,rgba(23,141,255,.16),transparent 31%),
+    linear-gradient(180deg,#030713 0%,#02040b 100%)!important;
+}
+.v18-nebula{opacity:.52!important;filter:blur(20px)!important;animation:v24NebulaMove 10s ease-in-out infinite alternate!important}
+@keyframes v24NebulaMove{to{transform:translateX(-10px) translateY(8px) scale(1.05)}}
+
+/* Random small stars without grid */
+.v24-starfield{
+  position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.88;
+  background:
+    radial-gradient(circle at 7% 16%,#fff 0 1px,transparent 1.6px),
+    radial-gradient(circle at 16% 48%,#34efff 0 1.2px,transparent 1.9px),
+    radial-gradient(circle at 25% 22%,#fff 0 .8px,transparent 1.4px),
+    radial-gradient(circle at 31% 73%,#df42ff 0 1.6px,transparent 2.4px),
+    radial-gradient(circle at 43% 38%,#fff 0 1.4px,transparent 2px),
+    radial-gradient(circle at 52% 18%,#34efff 0 1.1px,transparent 1.7px),
+    radial-gradient(circle at 61% 66%,#fff 0 .9px,transparent 1.5px),
+    radial-gradient(circle at 72% 27%,#df42ff 0 1.5px,transparent 2.2px),
+    radial-gradient(circle at 83% 57%,#fff 0 1px,transparent 1.6px),
+    radial-gradient(circle at 92% 40%,#34efff 0 1.3px,transparent 2px),
+    radial-gradient(circle at 95% 82%,#fff 0 .8px,transparent 1.4px),
+    radial-gradient(circle at 12% 84%,#df42ff 0 1px,transparent 1.7px),
+    radial-gradient(circle at 38% 91%,#fff 0 1.1px,transparent 1.8px),
+    radial-gradient(circle at 69% 88%,#34efff 0 1px,transparent 1.7px);
+  animation:v24Twinkle 4.8s ease-in-out infinite alternate;
+}
+@keyframes v24Twinkle{from{opacity:.45;filter:brightness(.75)}to{opacity:.95;filter:brightness(1.7)}}
+.v24-dust{
+  position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.22;
+  background-image:radial-gradient(circle,#6ff7ff 0 .7px,transparent 1.3px);
+  background-size:83px 97px;
+  background-position:19px 31px;
+  animation:v24Dust 16s linear infinite;
+}
+@keyframes v24Dust{to{background-position:119px -69px}}
+.v24-meteor{
+  position:absolute;z-index:3;right:-160px;top:118px;width:140px;height:2px;opacity:0;
+  background:linear-gradient(90deg,#fff,#34efff,transparent);
+  border-radius:99px;box-shadow:0 0 18px #34efff;transform:rotate(-31deg);
+  animation:v24Meteor 13s linear infinite 2s;
+}
+@keyframes v24Meteor{
+  0%{opacity:0;transform:translate(0,0) rotate(-31deg)}
+  8%{opacity:.9}
+  22%{opacity:0}
+  100%{opacity:0;transform:translate(-780px,430px) rotate(-31deg)}
+}
+
+/* ship: less front-facing, better angle and engine */
+.v22-ship{
+  left:51.5%!important;
+  top:263px!important;
+  width:385px!important;
+  height:222px!important;
+  transform:translateX(-50%) rotate(-13deg) perspective(900px) rotateX(10deg) rotateY(-7deg)!important;
+  filter:drop-shadow(0 0 34px #34efff) drop-shadow(0 0 36px #7e43ff)!important;
+  animation:v24ShipFloat 3.1s ease-in-out infinite!important;
+}
+@keyframes v24ShipFloat{
+  0%,100%{transform:translateX(-50%) rotate(-13deg) perspective(900px) rotateX(10deg) rotateY(-7deg) translateY(0)}
+  50%{transform:translateX(-50%) rotate(-13deg) perspective(900px) rotateX(10deg) rotateY(-7deg) translateY(-9px)}
+}
+.v22-flame{
+  animation:v24Flame .14s infinite alternate!important;
+  filter:drop-shadow(0 0 22px #34efff) drop-shadow(0 0 32px #df42ff)!important;
+}
+@keyframes v24Flame{
+  from{transform:scaleY(.82) scaleX(.72);opacity:.72;filter:hue-rotate(0deg)}
+  to{transform:scaleY(1.35) scaleX(1.12);opacity:1;filter:hue-rotate(42deg)}
+}
+.v22-flame-inner{animation:v24FlameInner .12s infinite alternate!important}
+@keyframes v24FlameInner{from{transform:scaleY(.6) scaleX(.55);opacity:.45}to{transform:scaleY(1.15) scaleX(.9);opacity:.95}}
+.v22-ship text{
+  paint-order:stroke!important;
+  stroke:#050914!important;
+  stroke-width:3px!important;
+  fill:#38fff2!important;
+  filter:drop-shadow(0 0 8px #34efff)!important;
+}
+
+/* Today's Mining smaller and lower */
+.v15-today{
+  width:112px!important;
+  min-height:32px!important;
+  bottom:70px!important;
+  padding:4px 6px!important;
+  gap:5px!important;
+  border-radius:10px!important;
+  background:rgba(3,7,18,.68)!important;
+  border-color:#9b42ff88!important;
+  z-index:12!important;
+  transform:translateX(-50%) scale(.88)!important;
+}
+.v15-today .pickaxe{width:22px!important;height:22px!important;font-size:11px!important}
+.v15-today span{font-size:8px!important}
+.v15-today b,.v15-today b em{font-size:9.8px!important;line-height:1!important}
+
+/* planets and particles */
+.v15-planet{width:134px!important;height:134px!important;left:-52px!important;bottom:165px!important;opacity:.78!important}
+.v15-moon{width:34px!important;height:34px!important;right:110px!important;top:245px!important;opacity:.30!important;filter:blur(1.2px)!important}
+.v15-particle{font-size:13px!important;color:#41fff2!important;animation:v24MineFloat 2.9s ease-in-out infinite!important}
+.v15-particle.p1{left:86px!important;top:312px!important}
+.v15-particle.p2{right:64px!important;bottom:258px!important}
+@keyframes v24MineFloat{
+  0%{opacity:0;transform:translateY(16px) scale(.9)}
+  32%,68%{opacity:.85}
+  100%{opacity:0;transform:translateY(-28px) scale(1.05)}
+}
+.v15-gems{right:34px!important;bottom:236px!important;width:105px!important;height:58px!important;opacity:.76!important}
+
+/* boost bar */
+.v15-boost{bottom:18px!important;left:44px!important;right:44px!important;z-index:9!important}
+.v15-boost span{font-size:11px!important}.v15-boost b{font-size:16px!important}
+
+/* Mobile fine tune */
+@media(max-width:430px){
+  .v15-hero{height:575px!important}
+  .v22-ship{
+    left:51.5%!important;
+    top:272px!important;
+    width:338px!important;
+    height:198px!important;
+    transform:translateX(-50%) rotate(-13deg) perspective(900px) rotateX(10deg) rotateY(-7deg)!important;
+  }
+  @keyframes v24ShipFloat{
+    0%,100%{transform:translateX(-50%) rotate(-13deg) perspective(900px) rotateX(10deg) rotateY(-7deg) translateY(0)}
+    50%{transform:translateX(-50%) rotate(-13deg) perspective(900px) rotateX(10deg) rotateY(-7deg) translateY(-8px)}
+  }
+  .v15-planet{width:126px!important;height:126px!important;left:-50px!important;bottom:170px!important}
+  .v15-moon{width:30px!important;height:30px!important;right:92px!important;top:252px!important}
+  .v15-today{width:104px!important;bottom:76px!important;transform:translateX(-50%) scale(.86)!important}
+  .v15-today .pickaxe{width:20px!important;height:20px!important}
+  .v15-today span{font-size:7.5px!important}
+  .v15-today b,.v15-today b em{font-size:9px!important}
+  .v15-boost{left:28px!important;right:28px!important;bottom:18px!important}
+}
+
 </style></head><body><div class="bg"></div><div class="meteor m1"></div><div class="meteor m2"></div><div class="meteor m3"></div><div class="particles"></div><main class="app">
 <header class="top"><div class="brand"><div class="symbol"><b>X</b><small>SPNX</small></div><div><h1>SpaceNovaX</h1><p>Explore. Earn. Beyond.</p></div></div><button class="phase">🚀 <span id="phaseName">Genesis Launch</span></button></header>
 <section id="home" class="page active">
