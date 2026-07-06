@@ -1087,3 +1087,49 @@
   .v15-today{width:164px!important;bottom:110px!important}
   .v15-boost{left:38px!important;right:38px!important;bottom:22px!important}
 }
+
+/* v20 release UI: final premium space dashboard */
+.brand:after{content:"v20";margin-left:8px;font-size:13px;background:#7e43ff77;border:1px solid #b86cff;border-radius:10px;padding:3px 8px;font-weight:1000}
+.v15-hero{height:575px!important;border-color:#506dff99!important;background:radial-gradient(ellipse at 66% 36%,rgba(223,66,255,.21),transparent 27%),radial-gradient(ellipse at 53% 48%,rgba(52,239,255,.10),transparent 30%),radial-gradient(ellipse at 20% 72%,rgba(23,141,255,.18),transparent 30%),linear-gradient(180deg,#030713 0%,#02040b 100%)!important}
+.v15-stars-layer,.v17-random-stars,.v18-organic-stars{display:none!important;background:none!important;opacity:0!important}
+.v19-stars{opacity:.95!important;background:#fff!important;box-shadow:14px 38px 0 0 #fff,38px 420px 0 1px #34efff,76px 178px 0 .4px #fff,118px 74px 0 0 #df42ff,148px 515px 0 .7px #fff,192px 270px 0 1.4px #34efff,229px 58px 0 .4px #fff,266px 372px 0 0 #df42ff,302px 142px 0 1px #fff,331px 492px 0 .4px #34efff,372px 218px 0 0 #fff,418px 88px 0 1.4px #df42ff,449px 340px 0 .4px #fff,483px 128px 0 0 #34efff,27px 545px 0 .4px #df42ff,91px 382px 0 0 #fff,136px 235px 0 1px #34efff,178px 31px 0 0 #fff,211px 460px 0 .4px #fff,249px 313px 0 0 #df42ff,291px 90px 0 1px #fff,339px 174px 0 .4px #34efff,398px 270px 0 0 #fff,458px 308px 0 .4px #df42ff,23px 156px 0 .4px #fff,139px 532px 0 1px #34efff,276px 468px 0 0 #fff,428px 42px 0 .4px #fff,506px 456px 0 1px #fff!important}
+.v18-nebula{opacity:.9!important;filter:blur(16px)!important;background:radial-gradient(ellipse at 72% 36%,rgba(223,66,255,.34),transparent 24%),radial-gradient(ellipse at 57% 45%,rgba(52,239,255,.16),transparent 25%),radial-gradient(ellipse at 34% 67%,rgba(126,67,255,.20),transparent 29%)!important}
+.v15-planet{width:190px!important;height:190px!important;left:-70px!important;bottom:132px!important;opacity:.96!important;background:radial-gradient(circle at 34% 28%,#fff,#6ef0ff 12%,#1d6cce 34%,#071f50 61%,#02050e 88%)!important}
+.v15-moon{right:48px!important;top:146px!important;width:58px!important;height:58px!important;opacity:.85!important;background:radial-gradient(circle at 36% 28%,#f2d8ff,#8a2cff 45%,#160820 84%)!important}
+.v15-ship{left:50%!important;top:248px!important;width:280px!important;height:175px!important;transform:translateX(-50%) scale(.86)!important;z-index:8!important;filter:drop-shadow(0 0 30px #34efff) drop-shadow(0 0 28px #7e43ff)!important}
+@keyframes v17Ship{0%,100%{transform:translateX(-50%) translateY(0) scale(.86)}50%{transform:translateX(-50%) translateY(-8px) scale(.875)}}
+.v15-ship-body{left:82px!important;top:65px!important;width:142px!important;height:50px!important}
+.v15-ship-nose{left:118px!important;top:16px!important;width:68px!important;height:86px!important}
+.v15-wing.top{left:25px!important;top:82px!important;width:108px!important;height:56px!important}
+.v15-wing.bottom{left:146px!important;bottom:39px!important;width:108px!important;height:56px!important}
+.v15-engine.e1{left:96px!important;bottom:38px!important;width:28px!important;height:28px!important}
+.v15-engine.e2{left:150px!important;bottom:38px!important;width:28px!important;height:28px!important}
+.v15-flame{left:108px!important;bottom:-54px!important;width:54px!important;height:95px!important}
+.v15-ship small{font-size:16px!important;left:54px!important;top:101px!important}
+.v15-ship small:after{left:148px!important}
+.v15-today{width:198px!important;min-height:50px!important;bottom:102px!important;padding:8px 11px!important;gap:9px!important;border-radius:16px!important;background:rgba(3,7,18,.78)!important;backdrop-filter:blur(10px)!important;border-color:#9b42ff99!important}
+.v15-today .pickaxe{width:38px!important;height:38px!important;font-size:18px!important}
+.v15-today span{font-size:12px!important}
+.v15-today b,.v15-today b em{font-size:16px!important;line-height:1.08!important}
+.v15-boost{left:44px!important;right:44px!important;bottom:20px!important;background:rgba(3,7,18,.74)!important}
+.v15-boost span{font-size:12px!important}.v15-boost b{font-size:18px!important}
+.v15-particle{font-size:15px!important;opacity:.9!important}
+.v15-particle.p1{left:78px!important;top:300px!important}.v15-particle.p2{right:58px!important;bottom:228px!important}
+.v15-gems{right:36px!important;bottom:205px!important;width:135px!important;height:72px!important}
+.v15-balance{top:34px!important}.v15-balance label{letter-spacing:.22em!important}.v15-balance h2{font-size:39px!important;margin-top:14px!important}.v15-balance p{font-size:26px!important;margin-top:6px!important}.usd{margin-top:13px!important}
+.v15-mining-grid{gap:12px!important;margin-top:12px!important}.v15-timer,.v15-reward{min-height:168px!important}.v15-timer strong{font-size:42px!important}.v15-reward b{font-size:36px!important}
+.v15-action-grid{gap:9px!important}.v15-quick{min-height:82px!important}.nav{bottom:0!important;z-index:999!important}
+@media(max-width:430px){
+  .v15-hero{height:550px!important}.v15-balance h2{font-size:34px!important}.v15-balance p{font-size:23px!important}
+  .v15-planet{width:170px!important;height:170px!important;left:-65px!important;bottom:145px!important}
+  .v15-moon{width:48px!important;height:48px!important;right:45px!important;top:150px!important}
+  .v15-ship{top:250px!important;width:255px!important;height:160px!important;transform:translateX(-50%) scale(.80)!important}
+  @keyframes v17Ship{0%,100%{transform:translateX(-50%) translateY(0) scale(.80)}50%{transform:translateX(-50%) translateY(-7px) scale(.815)}}
+  .v15-ship-body{left:76px!important;top:60px!important;width:128px!important;height:46px!important}
+  .v15-ship-nose{left:106px!important;top:15px!important;width:62px!important;height:78px!important}
+  .v15-wing.top{left:23px!important;top:78px!important;width:98px!important;height:52px!important}
+  .v15-wing.bottom{left:132px!important;bottom:38px!important;width:98px!important;height:52px!important}
+  .v15-engine.e1{left:88px!important;bottom:36px!important}.v15-engine.e2{left:138px!important;bottom:36px!important}
+  .v15-flame{left:100px!important;bottom:-48px!important;width:50px!important;height:82px!important}
+  .v15-today{width:178px!important;bottom:105px!important}.v15-boost{left:28px!important;right:28px!important}
+}
