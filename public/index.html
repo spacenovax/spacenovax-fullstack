@@ -3267,14 +3267,214 @@ body.v42-force .header:not(.v44-header){
 
 html,body{overflow-x:hidden!important}
 
+
+/* v45 clean single header */
+/* Kill all historical headers and badges */
+.top,
+.v43-top,
+.v44-header,
+header,
+.header,
+.brand:after,
+.v43-brand:after,
+.v44-brand:after{
+  display:none!important;
+  visibility:hidden!important;
+  height:0!important;
+  min-height:0!important;
+  max-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+
+/* Keep only v45 header visible */
+.v45-header{
+  display:grid!important;
+  visibility:visible!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+  grid-template-columns:82px minmax(0,1fr) auto!important;
+  grid-template-areas:"logo brand launch"!important;
+  align-items:center!important;
+  gap:16px!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+  min-height:86px!important;
+  max-height:none!important;
+  margin:0 auto 18px!important;
+  padding:4px 0 6px!important;
+  position:relative!important;
+  overflow:visible!important;
+  z-index:1000!important;
+}
+
+.v45-logo{
+  grid-area:logo!important;
+  width:82px!important;
+  height:82px!important;
+  min-width:82px!important;
+  border-radius:50%!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  position:relative!important;
+  background:radial-gradient(circle at 35% 28%,#8effff 0%,#6056ff 42%,#08142c 100%)!important;
+  border:2px solid rgba(226,255,255,.85)!important;
+  box-shadow:0 0 26px rgba(52,239,255,.62), inset 0 0 22px rgba(255,255,255,.16)!important;
+  color:#fff!important;
+}
+.v45-logo:before{
+  content:""!important;
+  position:absolute!important;
+  width:112%!important;
+  height:34%!important;
+  border:3px solid rgba(190,255,255,.70)!important;
+  border-left-color:transparent!important;
+  border-right-color:transparent!important;
+  border-radius:50%!important;
+  transform:rotate(-21deg)!important;
+}
+.v45-logo b{
+  font-size:30px!important;
+  font-weight:1000!important;
+  line-height:1!important;
+  text-shadow:0 0 12px rgba(255,255,255,.65)!important;
+}
+.v45-logo small{
+  font-size:12px!important;
+  font-weight:1000!important;
+  line-height:1!important;
+  margin-top:2px!important;
+}
+
+.v45-brand{
+  grid-area:brand!important;
+  min-width:0!important;
+  text-align:left!important;
+  overflow:visible!important;
+}
+.v45-brand h1{
+  margin:0!important;
+  padding:0!important;
+  font-size:38px!important;
+  line-height:1.02!important;
+  letter-spacing:-.5px!important;
+  color:#f7fbff!important;
+  white-space:nowrap!important;
+  text-shadow:0 0 22px rgba(255,255,255,.28)!important;
+}
+.v45-brand h1 span{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  margin-left:10px!important;
+  transform:translateY(-3px)!important;
+  font-size:13px!important;
+  line-height:1!important;
+  background:#7e43ff77!important;
+  border:1px solid #b86cff!important;
+  border-radius:11px!important;
+  padding:4px 9px!important;
+  font-weight:1000!important;
+  color:#fff!important;
+}
+.v45-brand p{
+  margin:4px 0 0!important;
+  padding:0!important;
+  font-size:18px!important;
+  line-height:1.15!important;
+  color:rgba(235,240,255,.78)!important;
+  white-space:nowrap!important;
+}
+
+.v45-launch{
+  grid-area:launch!important;
+  justify-self:end!important;
+  align-self:center!important;
+  min-width:210px!important;
+  width:auto!important;
+  max-width:none!important;
+  padding:14px 24px!important;
+  border-radius:19px!important;
+  border:1px solid rgba(184,108,255,.75)!important;
+  background:linear-gradient(135deg,rgba(77,71,255,.78),rgba(176,49,255,.72))!important;
+  box-shadow:0 0 22px rgba(126,67,255,.45), inset 0 0 16px rgba(255,255,255,.13)!important;
+  color:#fff!important;
+  font-size:16px!important;
+  font-weight:1000!important;
+  line-height:1.1!important;
+  white-space:nowrap!important;
+  text-align:center!important;
+  text-shadow:0 0 10px rgba(255,255,255,.35)!important;
+}
+
+/* Tablet */
+@media(min-width:769px) and (max-width:980px){
+  .v45-header{grid-template-columns:70px minmax(0,1fr) auto!important;gap:13px!important}
+  .v45-logo{width:70px!important;height:70px!important;min-width:70px!important}
+  .v45-logo b{font-size:25px!important}
+  .v45-logo small{font-size:10px!important}
+  .v45-brand h1{font-size:31px!important}
+  .v45-brand p{font-size:15px!important}
+  .v45-launch{min-width:172px!important;padding:12px 18px!important;font-size:14px!important}
+}
+
+/* Mobile */
+@media(max-width:768px){
+  .app{padding-left:8px!important;padding-right:8px!important;max-width:100%!important}
+  .v45-header{
+    grid-template-columns:62px minmax(0,1fr)!important;
+    grid-template-areas:"logo brand" "launch launch"!important;
+    gap:8px 10px!important;
+    min-height:126px!important;
+    margin-bottom:14px!important;
+    padding:2px 0 4px!important;
+  }
+  .v45-logo{width:62px!important;height:62px!important;min-width:62px!important}
+  .v45-logo b{font-size:22px!important}
+  .v45-logo small{font-size:9px!important}
+  .v45-brand h1{font-size:28px!important;letter-spacing:-.4px!important}
+  .v45-brand h1 span{font-size:11px!important;padding:3px 7px!important;margin-left:7px!important}
+  .v45-brand p{font-size:14px!important}
+  .v45-launch{justify-self:center!important;min-width:190px!important;padding:10px 22px!important;border-radius:16px!important;font-size:14px!important}
+}
+
+/* Small phones */
+@media(max-width:370px){
+  .v45-header{grid-template-columns:54px minmax(0,1fr)!important;gap:7px 8px!important}
+  .v45-logo{width:54px!important;height:54px!important;min-width:54px!important}
+  .v45-logo b{font-size:19px!important}
+  .v45-logo small{font-size:8px!important}
+  .v45-brand h1{font-size:24px!important}
+  .v45-brand h1 span{font-size:10px!important;padding:3px 6px!important;margin-left:5px!important}
+  .v45-brand p{font-size:12px!important}
+  .v45-launch{min-width:170px!important;font-size:13px!important;padding:9px 18px!important}
+}
+
+html,body{overflow-x:hidden!important}
+
 </style></head><body class="v42-force"><div class="bg"></div><div class="meteor m1"></div><div class="meteor m2"></div><div class="meteor m3"></div><div class="particles"></div><main class="app">
-<div class="v44-header">
-  <div class="v44-logo">
+<div class="v45-header" data-header="single">
+  <div class="v45-logo">
     <b>X</b>
     <small>SPNX</small>
   </div>
 
-  <div class="v44-brand">
+  <div class="v45-brand">
+    <h1>SpaceNovaX <span>v45</span></h1>
+    <p>Explore. Earn. Beyond.</p>
+  </div>
+
+  <button class="v45-launch" type="button">🚀 Genesis Launch</button>
+</div>
+
+
+<div class="v44-brand">
     <h1>SpaceNovaX <span>v44</span></h1>
     <p>Explore. Earn. Beyond.</p>
   </div>
@@ -3293,7 +3493,6 @@ html,body{overflow-x:hidden!important}
 </div>
 
 
-<header class="top"><div class="brand"><div class="symbol"><b>X</b><small>SPNX</small></div><div><h1>SpaceNovaX</h1><p>Explore. Earn. Beyond.</p></div></div><button class="phase">🚀 <span id="phaseName">Genesis Launch</span></button></header>
 <section id="home" class="page active">
 <div class="v15-profile glass">
   <div class="v15-avatar"></div>
@@ -3856,30 +4055,34 @@ render = function(){
 
 
 
+
+
+
 <script>
 (function(){
-  function v44SingleHeaderFix(){
-    var headers = document.querySelectorAll('.v44-header');
+  function cleanHeadersV45(){
+    document.querySelectorAll('.top, .v43-top, .v44-header, header, .header').forEach(function(el){
+      if(!el.classList.contains('v45-header')) el.remove();
+    });
+
+    var headers = document.querySelectorAll('.v45-header');
     if(headers.length > 1){
       for(var i=1;i<headers.length;i++) headers[i].remove();
     }
 
-    document.querySelectorAll('.top:not(.v44-header), .v43-top').forEach(function(el){
-      el.remove();
-    });
-
-    var launch = document.querySelector('.v44-launch');
+    var launch = document.querySelector('.v45-launch');
     if(launch) launch.innerHTML = '🚀 Genesis Launch';
 
-    var badge = document.querySelector('.v44-brand h1 span');
-    if(badge) badge.textContent = 'v44';
+    var badge = document.querySelector('.v45-brand h1 span');
+    if(badge) badge.textContent = 'v45';
   }
 
-  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', v44SingleHeaderFix);
-  else v44SingleHeaderFix();
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', cleanHeadersV45);
+  else cleanHeadersV45();
 
-  setTimeout(v44SingleHeaderFix, 300);
-  setTimeout(v44SingleHeaderFix, 1200);
+  setTimeout(cleanHeadersV45, 200);
+  setTimeout(cleanHeadersV45, 800);
+  setTimeout(cleanHeadersV45, 1600);
 })();
 </script>
 

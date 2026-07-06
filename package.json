@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v44-single-header-fix",
-  "version": "44.0.0",
-  "description": "SpaceNovaX v44 single header fix",
+  "name": "spacenovax-fullstack-v45-clean-single-header",
+  "version": "45.0.0",
+  "description": "SpaceNovaX v45 clean single header",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
