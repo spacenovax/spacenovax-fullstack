@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v33-spnx-wing-final-ui",
-  "version": "33.0.0",
-  "description": "SpaceNovaX v33 SPNX wing final UI",
+  "name": "spacenovax-fullstack-v34-spnx-decal-polish-ui",
+  "version": "34.0.0",
+  "description": "SpaceNovaX v34 SPNX decal polish UI",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
