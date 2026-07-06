@@ -1,18 +1,18 @@
-# SpaceNovaX v24 Animation Polish UI
+# SpaceNovaX v26 Official Spaceship Mk-I
 
 수정:
-- 우주선 각도/3D 시점 개선
-- Today's Mining 카드 추가 축소 및 아래 이동
-- 왼쪽 행성 15% 이상 축소
-- 배경 랜덤 별/우주먼지/유성 추가
-- 채굴 파티클이 위로 떠오르는 애니메이션 강화
-- 엔진 화염 20~30% 강화
-- SPNX 날개 글자 네온 강화
-- Phase 링/로고 펄스 유지
+- 기존 깨지던 우주선 완전 제거
+- Official Spaceship Mk-I 신규 SVG 적용
+- 양쪽 큰 SPNX 글자 삭제
+- 검정 삼각형 문양 완전 삭제
+- 오른쪽 날개에만 작은 SPNX 1개 적용
+- 메탈 패널 라인 적용
+- 엔진/플라즈마 강화
+- Today’s Mining 카드 컴팩트 유지
 - 모바일 대응 재조정
 
 배포:
 1. 압축 풀기
 2. GitHub spacenovax-fullstack에 전체 덮어올리기
 3. Render Manual Deploy
-4. 접속: https://spacenovax-fullstack.onrender.com/?v=24
+4. 브라우저에서 캐시 무시 접속: https://spacenovax-fullstack.onrender.com/?v=26

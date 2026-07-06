@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v24-animation-polish-ui",
-  "version": "24.0.0",
-  "description": "SpaceNovaX v24 animation polish UI",
+  "name": "spacenovax-fullstack-v26-official-ship-mk1",
+  "version": "26.0.0",
+  "description": "SpaceNovaX v26 Official Spaceship Mk-I",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

@@ -848,6 +848,266 @@
   .v15-boost{left:28px!important;right:28px!important;bottom:18px!important}
 }
 
+
+/* v25 3D ship premium UI */
+.brand:after{content:"v25";margin-left:8px;font-size:13px;background:#7e43ff77;border:1px solid #b86cff;border-radius:10px;padding:3px 8px;font-weight:1000}
+
+/* hide old ships */
+.v22-ship,.v15-ship,.v23-energy-ring{display:none!important}
+
+/* hero final */
+.v15-hero{
+  height:610px!important;
+  background:
+    radial-gradient(ellipse at 56% 54%,rgba(52,239,255,.14),transparent 31%),
+    radial-gradient(ellipse at 76% 35%,rgba(223,66,255,.20),transparent 27%),
+    radial-gradient(ellipse at 18% 70%,rgba(23,141,255,.16),transparent 31%),
+    linear-gradient(180deg,#030713 0%,#02040b 100%)!important;
+}
+.v18-nebula{opacity:.52!important;filter:blur(20px)!important}
+
+/* premium 3D ship */
+.v25-ship{
+  position:absolute;
+  left:52%;
+  top:245px;
+  width:420px;
+  height:260px;
+  transform:translateX(-50%) rotate(-16deg) perspective(900px) rotateX(9deg) rotateY(-8deg);
+  z-index:9;
+  pointer-events:none;
+  filter:drop-shadow(0 0 34px #34efff) drop-shadow(0 0 38px #7e43ff);
+  animation:v25Float 3.4s ease-in-out infinite;
+}
+.v25-ship-svg{width:100%;height:100%;overflow:visible}
+.v25-ship-core{transform-origin:320px 210px;filter:contrast(1.08) brightness(1.05)}
+@keyframes v25Float{
+  0%,100%{transform:translateX(-50%) rotate(-16deg) perspective(900px) rotateX(9deg) rotateY(-8deg) translateY(0)}
+  50%{transform:translateX(-50%) rotate(-16deg) perspective(900px) rotateX(9deg) rotateY(-8deg) translateY(-10px)}
+}
+.v25-flame{
+  transform-origin:center top;
+  filter:drop-shadow(0 0 18px #34efff) drop-shadow(0 0 28px #ff4bff);
+  animation:v25Flame .15s infinite alternate;
+}
+.v25-flame.right{animation-delay:.05s}
+@keyframes v25Flame{
+  from{transform:scaleY(.72) scaleX(.72);opacity:.62}
+  to{transform:scaleY(1.28) scaleX(1.06);opacity:1}
+}
+.v25-engine-particles{
+  position:absolute;left:52%;top:485px;width:180px;height:120px;transform:translateX(-50%) rotate(-16deg);z-index:8;pointer-events:none;
+  background:
+    radial-gradient(circle at 38% 20%,#34efff 0 3px,transparent 4px),
+    radial-gradient(circle at 54% 32%,#ff4bff 0 2px,transparent 3px),
+    radial-gradient(circle at 47% 58%,#fff 0 2px,transparent 3px),
+    radial-gradient(circle at 60% 76%,#7e43ff 0 3px,transparent 4px);
+  filter:drop-shadow(0 0 12px #34efff);
+  animation:v25Particles 2.4s ease-in-out infinite;
+}
+@keyframes v25Particles{
+  0%{opacity:0;transform:translateX(-50%) rotate(-16deg) translateY(-8px)}
+  35%,70%{opacity:.85}
+  100%{opacity:0;transform:translateX(-50%) rotate(-16deg) translateY(38px)}
+}
+
+/* remove dark wing patches impression: old black patterns gone in SVG; keep small one-side SPNX */
+
+/* Today's Mining compact and lower */
+.v15-today{
+  width:124px!important;
+  min-height:34px!important;
+  bottom:72px!important;
+  padding:5px 6px!important;
+  gap:5px!important;
+  border-radius:11px!important;
+  background:rgba(3,7,18,.72)!important;
+  border-color:#9b42ff88!important;
+  z-index:12!important;
+  transform:translateX(-50%) scale(.9)!important;
+}
+.v15-today .pickaxe{width:24px!important;height:24px!important;font-size:12px!important}
+.v15-today span{font-size:8px!important}
+.v15-today b,.v15-today b em{font-size:10px!important;line-height:1!important}
+
+/* planets */
+.v15-planet{width:126px!important;height:126px!important;left:-48px!important;bottom:174px!important;opacity:.76!important}
+.v15-moon{width:32px!important;height:32px!important;right:104px!important;top:238px!important;opacity:.30!important;filter:blur(1.2px)!important}
+
+/* stats bar */
+.v15-boost{
+  bottom:16px!important;
+  left:44px!important;
+  right:44px!important;
+  z-index:9!important;
+}
+.v15-boost span{font-size:11px!important}
+.v15-boost b{font-size:16px!important}
+
+/* mining numbers as engine particles */
+.v15-particle{font-size:13px!important;color:#38fff2!important}
+.v15-particle.p1{left:86px!important;top:315px!important}
+.v15-particle.p2{right:65px!important;bottom:258px!important}
+.v15-gems{right:35px!important;bottom:242px!important;width:105px!important;height:58px!important;opacity:.76!important}
+
+/* cleaner stars */
+.v24-starfield{opacity:.75!important}
+.v24-dust{opacity:.18!important}
+.v19-stars{opacity:.64!important}
+
+/* mobile */
+@media(max-width:430px){
+  .v15-hero{height:590px!important}
+  .v25-ship{
+    left:52%!important;
+    top:255px!important;
+    width:365px!important;
+    height:230px!important;
+    transform:translateX(-50%) rotate(-16deg) perspective(900px) rotateX(9deg) rotateY(-8deg);
+  }
+  @keyframes v25Float{
+    0%,100%{transform:translateX(-50%) rotate(-16deg) perspective(900px) rotateX(9deg) rotateY(-8deg) translateY(0)}
+    50%{transform:translateX(-50%) rotate(-16deg) perspective(900px) rotateX(9deg) rotateY(-8deg) translateY(-9px)}
+  }
+  .v25-engine-particles{top:476px;width:150px;height:100px}
+  .v15-planet{width:118px!important;height:118px!important;left:-46px!important;bottom:180px!important}
+  .v15-moon{width:28px!important;height:28px!important;right:90px!important;top:246px!important}
+  .v15-today{width:112px!important;bottom:78px!important;transform:translateX(-50%) scale(.88)!important}
+  .v15-today .pickaxe{width:22px!important;height:22px!important}
+  .v15-today span{font-size:7.5px!important}
+  .v15-today b,.v15-today b em{font-size:9px!important}
+  .v15-boost{left:28px!important;right:28px!important;bottom:18px!important}
+}
+
+
+/* v26 official spaceship mk-i */
+.brand:after{content:"v26";margin-left:8px;font-size:13px;background:#7e43ff77;border:1px solid #b86cff;border-radius:10px;padding:3px 8px;font-weight:1000}
+
+/* Force hide every previous ship/decal */
+.v15-ship,.v22-ship,.v25-ship,.v23-energy-ring,.v25-engine-particles,
+.v15-ship-body,.v15-ship-nose,.v15-wing,.v15-engine,.v15-flame{
+  display:none!important;opacity:0!important;visibility:hidden!important;
+}
+
+/* hero */
+.v15-hero{
+  height:612px!important;
+  background:
+    radial-gradient(ellipse at 55% 54%,rgba(52,239,255,.15),transparent 32%),
+    radial-gradient(ellipse at 78% 36%,rgba(223,66,255,.17),transparent 27%),
+    radial-gradient(ellipse at 18% 71%,rgba(23,141,255,.16),transparent 31%),
+    linear-gradient(180deg,#030713 0%,#02040b 100%)!important;
+}
+.v18-nebula{opacity:.48!important;filter:blur(20px)!important}
+
+/* official clean 3d ship */
+.v26-ship{
+  position:absolute;
+  left:52%;
+  top:250px;
+  width:420px;
+  height:265px;
+  transform:translateX(-50%) rotate(-15deg) perspective(900px) rotateX(9deg) rotateY(-8deg);
+  z-index:10;
+  pointer-events:none;
+  filter:drop-shadow(0 0 34px #34efff) drop-shadow(0 0 38px #7e43ff);
+  animation:v26Float 3.4s ease-in-out infinite;
+}
+.v26-ship-svg{width:100%;height:100%;overflow:visible}
+.mk1-core{transform-origin:360px 245px;filter:contrast(1.08) brightness(1.05)}
+@keyframes v26Float{
+  0%,100%{transform:translateX(-50%) rotate(-15deg) perspective(900px) rotateX(9deg) rotateY(-8deg) translateY(0)}
+  50%{transform:translateX(-50%) rotate(-15deg) perspective(900px) rotateX(9deg) rotateY(-8deg) translateY(-10px)}
+}
+.mk-flame{
+  transform-origin:center top;
+  filter:drop-shadow(0 0 20px #42f9ff) drop-shadow(0 0 30px #ff4dff);
+  animation:v26Flame .15s infinite alternate;
+}
+.mk-flame.right{animation-delay:.05s}
+@keyframes v26Flame{
+  from{transform:scaleY(.72) scaleX(.74);opacity:.62}
+  to{transform:scaleY(1.32) scaleX(1.08);opacity:1}
+}
+
+/* engine particles */
+.v26-engine-particles{
+  position:absolute;
+  left:52%;
+  top:503px;
+  width:180px;
+  height:120px;
+  transform:translateX(-50%) rotate(-15deg);
+  z-index:9;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 35% 18%,#42f9ff 0 3px,transparent 4px),
+    radial-gradient(circle at 54% 36%,#ff4dff 0 2px,transparent 3px),
+    radial-gradient(circle at 47% 60%,#fff 0 2px,transparent 3px),
+    radial-gradient(circle at 64% 78%,#7e43ff 0 3px,transparent 4px);
+  filter:drop-shadow(0 0 12px #34efff);
+  animation:v26Particles 2.4s ease-in-out infinite;
+}
+@keyframes v26Particles{
+  0%{opacity:0;transform:translateX(-50%) rotate(-15deg) translateY(-8px)}
+  35%,70%{opacity:.85}
+  100%{opacity:0;transform:translateX(-50%) rotate(-15deg) translateY(40px)}
+}
+
+/* Today's mining compact and clear */
+.v15-today{
+  width:118px!important;
+  min-height:32px!important;
+  bottom:72px!important;
+  padding:4px 6px!important;
+  gap:5px!important;
+  border-radius:10px!important;
+  background:rgba(3,7,18,.70)!important;
+  border-color:#9b42ff88!important;
+  z-index:13!important;
+  transform:translateX(-50%) scale(.88)!important;
+}
+.v15-today .pickaxe{width:22px!important;height:22px!important;font-size:11px!important}
+.v15-today span{font-size:7.8px!important}
+.v15-today b,.v15-today b em{font-size:9.5px!important;line-height:1!important}
+
+/* planets */
+.v15-planet{width:124px!important;height:124px!important;left:-48px!important;bottom:176px!important;opacity:.76!important}
+.v15-moon{width:30px!important;height:30px!important;right:104px!important;top:242px!important;opacity:.28!important;filter:blur(1.2px)!important}
+
+/* stats and particles */
+.v15-boost{bottom:16px!important;left:44px!important;right:44px!important;z-index:9!important}
+.v15-boost span{font-size:11px!important}.v15-boost b{font-size:16px!important}
+.v15-particle{font-size:13px!important;color:#38fff2!important}
+.v15-particle.p1{left:86px!important;top:318px!important}
+.v15-particle.p2{right:65px!important;bottom:258px!important}
+.v15-gems{right:35px!important;bottom:242px!important;width:105px!important;height:58px!important;opacity:.76!important}
+.v24-starfield{opacity:.75!important}.v24-dust{opacity:.18!important}.v19-stars{opacity:.62!important}
+
+/* mobile */
+@media(max-width:430px){
+  .v15-hero{height:592px!important}
+  .v26-ship{
+    left:52%!important;
+    top:260px!important;
+    width:365px!important;
+    height:232px!important;
+    transform:translateX(-50%) rotate(-15deg) perspective(900px) rotateX(9deg) rotateY(-8deg);
+  }
+  @keyframes v26Float{
+    0%,100%{transform:translateX(-50%) rotate(-15deg) perspective(900px) rotateX(9deg) rotateY(-8deg) translateY(0)}
+    50%{transform:translateX(-50%) rotate(-15deg) perspective(900px) rotateX(9deg) rotateY(-8deg) translateY(-9px)}
+  }
+  .v26-engine-particles{top:486px;width:150px;height:100px}
+  .v15-planet{width:116px!important;height:116px!important;left:-46px!important;bottom:182px!important}
+  .v15-moon{width:27px!important;height:27px!important;right:90px!important;top:250px!important}
+  .v15-today{width:108px!important;bottom:78px!important;transform:translateX(-50%) scale(.86)!important}
+  .v15-today .pickaxe{width:20px!important;height:20px!important}
+  .v15-today span{font-size:7.2px!important}
+  .v15-today b,.v15-today b em{font-size:8.8px!important}
+  .v15-boost{left:28px!important;right:28px!important;bottom:18px!important}
+}
+
 </style></head><body><div class="bg"></div><div class="meteor m1"></div><div class="meteor m2"></div><div class="meteor m3"></div><div class="particles"></div><main class="app">
 <header class="top"><div class="brand"><div class="symbol"><b>X</b><small>SPNX</small></div><div><h1>SpaceNovaX</h1><p>Explore. Earn. Beyond.</p></div></div><button class="phase">🚀 <span id="phaseName">Genesis Launch</span></button></header>
 <section id="home" class="page active">
@@ -876,73 +1136,92 @@
     <div class="usd">≈ $18.43 USD</div>
   </div>
 
-  <div class="v22-ship" aria-hidden="true">
-  <svg viewBox="0 0 520 260" class="v22-ship-svg" role="img">
+  
+<div class="v26-ship" aria-hidden="true">
+  <svg viewBox="0 0 720 420" class="v26-ship-svg">
     <defs>
-      <linearGradient id="shipBody" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#f6fbff"/>
-        <stop offset="38%" stop-color="#6f83b7"/>
-        <stop offset="72%" stop-color="#101936"/>
-        <stop offset="100%" stop-color="#050713"/>
-      </linearGradient>
-      <linearGradient id="shipWing" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#0b102a"/>
-        <stop offset="45%" stop-color="#aef9ff"/>
-        <stop offset="68%" stop-color="#178dff"/>
-        <stop offset="100%" stop-color="#32106b"/>
-      </linearGradient>
-      <radialGradient id="engineGlow" cx="50%" cy="50%" r="50%">
+      <linearGradient id="mkMetal" x1="8%" y1="0%" x2="92%" y2="100%">
         <stop offset="0%" stop-color="#ffffff"/>
-        <stop offset="32%" stop-color="#34efff"/>
-        <stop offset="70%" stop-color="#7e43ff"/>
-        <stop offset="100%" stop-color="transparent"/>
+        <stop offset="18%" stop-color="#d9f4ff"/>
+        <stop offset="42%" stop-color="#8197bd"/>
+        <stop offset="70%" stop-color="#263b64"/>
+        <stop offset="100%" stop-color="#070b16"/>
+      </linearGradient>
+      <linearGradient id="mkPanel" x1="0%" y1="0%" x2="100%" y2="80%">
+        <stop offset="0%" stop-color="#10274f"/>
+        <stop offset="55%" stop-color="#7df7ff"/>
+        <stop offset="100%" stop-color="#1a60ff"/>
+      </linearGradient>
+      <radialGradient id="mkCockpit" cx="40%" cy="30%" r="68%">
+        <stop offset="0%" stop-color="#2f6baf"/>
+        <stop offset="32%" stop-color="#061127"/>
+        <stop offset="72%" stop-color="#00030a"/>
+        <stop offset="100%" stop-color="#44f8ff"/>
       </radialGradient>
-      <filter id="blueGlow">
-        <feGaussianBlur stdDeviation="4" result="blur"/>
-        <feMerge>
-          <feMergeNode in="blur"/>
-          <feMergeNode in="SourceGraphic"/>
-        </feMerge>
+      <radialGradient id="mkEngine" cx="50%" cy="50%" r="62%">
+        <stop offset="0%" stop-color="#ffffff"/>
+        <stop offset="26%" stop-color="#42f9ff"/>
+        <stop offset="58%" stop-color="#b64cff"/>
+        <stop offset="100%" stop-color="#040611"/>
+      </radialGradient>
+      <linearGradient id="mkFlame" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#ffffff"/>
+        <stop offset="20%" stop-color="#42f9ff"/>
+        <stop offset="48%" stop-color="#ff4dff"/>
+        <stop offset="82%" stop-color="#7c42ff"/>
+        <stop offset="100%" stop-color="transparent"/>
+      </linearGradient>
+      <filter id="mkGlow">
+        <feGaussianBlur stdDeviation="5" result="blur"/>
+        <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
       </filter>
     </defs>
 
-    <g class="ship-main v23-ship-main">
-      <path d="M260 12 C318 56 356 121 358 205 C323 236 199 236 164 205 C166 121 202 56 260 12 Z"
-            fill="url(#shipBody)" stroke="#d9fbff" stroke-width="3"/>
-      <path d="M260 31 C292 70 313 121 315 181 C296 200 224 200 205 181 C207 121 228 70 260 31 Z"
-            fill="#081126" stroke="#34efff" stroke-width="2" opacity=".9"/>
-      <path d="M260 48 C282 78 294 116 294 155 C280 169 240 169 226 155 C226 116 238 78 260 48 Z"
-            fill="#020713" stroke="#7bf8ff" stroke-width="2"/>
-      <path d="M224 148 C244 161 276 161 296 148 C291 184 278 203 260 210 C242 203 229 184 224 148 Z"
-            fill="#13245d" opacity=".95"/>
+    <g class="mk1-core">
+      <!-- clean main fuselage -->
+      <path d="M360 28 C450 98 500 195 480 302 C438 356 282 356 240 302 C220 195 270 98 360 28 Z"
+            fill="url(#mkMetal)" stroke="#e9fbff" stroke-width="3"/>
+      <path d="M360 64 C413 123 444 196 432 276 C398 310 322 310 288 276 C276 196 307 123 360 64 Z"
+            fill="#071228" stroke="#3af4ff" stroke-width="2" opacity=".94"/>
+      <path d="M360 90 C398 141 412 204 394 244 C374 262 346 262 326 244 C308 204 322 141 360 90 Z"
+            fill="url(#mkCockpit)" stroke="#88fbff" stroke-width="3"/>
+      <path d="M304 283 C335 302 385 302 416 283 C400 326 384 350 360 360 C336 350 320 326 304 283 Z"
+            fill="#13264c" stroke="#3b73ff" stroke-width="2"/>
 
-      <path d="M190 112 L18 185 L210 210 L246 156 Z"
-            fill="url(#shipWing)" stroke="#6ff7ff" stroke-width="3"/>
-      <path d="M330 112 L502 185 L310 210 L274 156 Z"
-            fill="url(#shipWing)" stroke="#6ff7ff" stroke-width="3"/>
+      <!-- slim wings: no black triangle decals -->
+      <path d="M286 200 L58 292 L296 324 L348 265 Z"
+            fill="url(#mkMetal)" stroke="#89faff" stroke-width="3"/>
+      <path d="M434 200 L662 292 L424 324 L372 265 Z"
+            fill="url(#mkMetal)" stroke="#89faff" stroke-width="3"/>
 
-      <path d="M116 176 L208 160 L194 192 L74 207 Z" fill="#050914" stroke="#178dff" stroke-width="2"/>
-      <path d="M404 176 L312 160 L326 192 L446 207 Z" fill="#050914" stroke="#178dff" stroke-width="2"/>
+      <!-- metallic panel lines instead of black patterns -->
+      <path d="M124 284 L288 260" stroke="#44f8ff" stroke-width="2" opacity=".55"/>
+      <path d="M160 304 L310 285" stroke="#ffffff" stroke-width="1.4" opacity=".35"/>
+      <path d="M596 284 L432 260" stroke="#44f8ff" stroke-width="2" opacity=".55"/>
+      <path d="M560 304 L410 285" stroke="#ffffff" stroke-width="1.4" opacity=".35"/>
+      <path d="M310 152 L272 292" stroke="#44f8ff" stroke-width="2.4" opacity=".75"/>
+      <path d="M410 152 L448 292" stroke="#44f8ff" stroke-width="2.4" opacity=".75"/>
+      <path d="M330 306 C345 315 375 315 390 306" stroke="#ffffff" stroke-width="1.8" opacity=".55" fill="none"/>
 
-      <ellipse cx="222" cy="214" rx="28" ry="20" fill="#050713" stroke="#34efff" stroke-width="3"/>
-      <ellipse cx="298" cy="214" rx="28" ry="20" fill="#050713" stroke="#34efff" stroke-width="3"/>
-      <circle cx="222" cy="214" r="13" fill="url(#engineGlow)" filter="url(#blueGlow)"/>
-      <circle cx="298" cy="214" r="13" fill="url(#engineGlow)" filter="url(#blueGlow)"/>
+      <!-- engines -->
+      <ellipse cx="316" cy="332" rx="36" ry="26" fill="#050813" stroke="#8dfcff" stroke-width="4"/>
+      <ellipse cx="404" cy="332" rx="36" ry="26" fill="#050813" stroke="#8dfcff" stroke-width="4"/>
+      <circle cx="316" cy="332" r="17" fill="url(#mkEngine)" filter="url(#mkGlow)"/>
+      <circle cx="404" cy="332" r="17" fill="url(#mkEngine)" filter="url(#mkGlow)"/>
 
-      <text x="82" y="190" fill="#34efff" font-size="33" font-weight="900"
-            transform="rotate(-15 82 190)" filter="url(#blueGlow)">SPNX</text>
-      <text x="355" y="190" fill="#34efff" font-size="33" font-weight="900"
-            transform="rotate(15 355 190)" filter="url(#blueGlow)">SPNX</text>
+      <!-- larger plasma -->
+      <path class="mk-flame left" d="M316 350 C274 410 278 458 316 520 C354 458 358 410 316 350 Z" fill="url(#mkFlame)"/>
+      <path class="mk-flame right" d="M404 350 C362 410 366 458 404 520 C442 458 446 410 404 350 Z" fill="url(#mkFlame)"/>
 
-      <path d="M260 210 C242 238 234 258 260 276 C286 258 278 238 260 210 Z"
-            class="v22-flame" fill="url(#engineGlow)"/>
-      <path d="M260 210 C250 235 250 252 260 266 C270 252 270 235 260 210 Z"
-            class="v22-flame-inner" fill="#ffffff"/>
+      <!-- one small logo only -->
+      <text x="500" y="294" fill="#061126" font-size="19" font-weight="900" transform="rotate(13 500 294)">SPNX</text>
+      <text x="500" y="294" fill="#39fff2" font-size="19" font-weight="900" transform="rotate(13 500 294)" opacity=".85">SPNX</text>
     </g>
   </svg>
 </div>
+<div class="v26-engine-particles"></div>
 
-  <div class="v15-particle p1">+0.000032 💎</div>
+<div class="v15-particle p1">+0.000032 💎</div>
   <div class="v15-particle p2">+0.000041</div>
   <div class="v15-gems"></div>
 
@@ -950,7 +1229,7 @@
     <div class="pickaxe">⛏️</div>
     <div>
       <span>Today’s Mining</span>
-      <b>+<em id="daily">22.500000</em> SPNX</b>
+      <b>+<em id="daily">30.000000</em> SPNX</b>
     </div>
   </div>
 
