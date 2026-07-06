@@ -1676,6 +1676,142 @@
   }
 }
 
+
+/* v35 meteor and SPNX polish */
+.brand:after{
+  content:"v35";
+  margin-left:8px;
+  font-size:13px;
+  background:#7e43ff77;
+  border:1px solid #b86cff;
+  border-radius:10px;
+  padding:3px 8px;
+  font-weight:1000;
+}
+
+/* SPNX decal: move inside, make more visible */
+.v26-ship text,
+.v26-ship text:nth-of-type(1),
+.v26-ship text:nth-of-type(2){
+  font-size:38px!important;
+  transform:translate(-68px,-20px) rotate(13deg)!important;
+  transform-origin:500px 294px!important;
+  letter-spacing:.3px!important;
+}
+.v26-ship text:nth-of-type(1){
+  fill:#031126!important;
+  opacity:.70!important;
+  stroke:#061126!important;
+  stroke-width:2.6px!important;
+}
+.v26-ship text:nth-of-type(2){
+  fill:#28fff1!important;
+  opacity:.98!important;
+  stroke:#061126!important;
+  stroke-width:2.2px!important;
+  filter:
+    drop-shadow(0 0 6px rgba(45,247,238,1))
+    drop-shadow(0 0 12px rgba(52,239,255,.55))!important;
+}
+
+/* wing highlight, subtle */
+.v26-ship svg path{
+  vector-effect:non-scaling-stroke;
+}
+.v26-ship{
+  filter:drop-shadow(0 0 32px #34efff) drop-shadow(0 0 34px #7e43ff)!important;
+}
+
+/* Today's Mining 10px lower */
+.v15-today{
+  bottom:51px!important;
+}
+
+/* 5-second meteor system */
+.v32-soft-meteor.one,
+.v32-soft-meteor.two,
+.v24-meteor,
+.v15-hero:before{
+  display:none!important;
+}
+
+.v35-meteor{
+  position:absolute;
+  z-index:4;
+  pointer-events:none;
+  opacity:0;
+  height:2px;
+  border-radius:999px;
+  background:linear-gradient(90deg,#ffffff,#34efff 28%,rgba(52,239,255,.55) 54%,transparent 100%);
+  box-shadow:0 0 10px #34efff,0 0 22px rgba(52,239,255,.45);
+  transform:rotate(-28deg);
+}
+
+.v35-meteor.m1{
+  top:78px;
+  right:-150px;
+  width:135px;
+  animation:v35MeteorA 5s linear infinite;
+}
+.v35-meteor.m2{
+  top:188px;
+  right:-130px;
+  width:95px;
+  background:linear-gradient(90deg,#ffffff,#9b42ff 30%,rgba(155,66,255,.55) 58%,transparent 100%);
+  box-shadow:0 0 10px #9b42ff,0 0 20px rgba(155,66,255,.45);
+  animation:v35MeteorB 5s linear infinite 1.8s;
+}
+.v35-meteor.m3{
+  top:118px;
+  left:-150px;
+  width:110px;
+  transform:rotate(24deg);
+  animation:v35MeteorC 5s linear infinite 3.4s;
+}
+
+@keyframes v35MeteorA{
+  0%{opacity:0;transform:translate(0,0) rotate(-28deg)}
+  8%{opacity:.90}
+  24%{opacity:0}
+  100%{opacity:0;transform:translate(-760px,410px) rotate(-28deg)}
+}
+@keyframes v35MeteorB{
+  0%{opacity:0;transform:translate(0,0) rotate(-34deg)}
+  10%{opacity:.72}
+  22%{opacity:0}
+  100%{opacity:0;transform:translate(-620px,320px) rotate(-34deg)}
+}
+@keyframes v35MeteorC{
+  0%{opacity:0;transform:translate(0,0) rotate(24deg)}
+  9%{opacity:.78}
+  23%{opacity:0}
+  100%{opacity:0;transform:translate(690px,330px) rotate(24deg)}
+}
+
+/* stars a bit more alive */
+.v32-random-stars{
+  animation-duration:4.8s!important;
+}
+.v24-starfield{
+  opacity:.66!important;
+}
+
+/* mobile */
+@media(max-width:430px){
+  .v26-ship text,
+  .v26-ship text:nth-of-type(1),
+  .v26-ship text:nth-of-type(2){
+    font-size:35px!important;
+    transform:translate(-62px,-18px) rotate(13deg)!important;
+  }
+  .v15-today{
+    bottom:56px!important;
+  }
+  .v35-meteor.m1{top:72px;width:120px}
+  .v35-meteor.m2{top:172px;width:84px}
+  .v35-meteor.m3{top:112px;width:96px}
+}
+
 </style></head><body><div class="bg"></div><div class="meteor m1"></div><div class="meteor m2"></div><div class="meteor m3"></div><div class="particles"></div><main class="app">
 <header class="top"><div class="brand"><div class="symbol"><b>X</b><small>SPNX</small></div><div><h1>SpaceNovaX</h1><p>Explore. Earn. Beyond.</p></div></div><button class="phase">🚀 <span id="phaseName">Genesis Launch</span></button></header>
 <section id="home" class="page active">
