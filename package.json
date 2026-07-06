@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v12-referral-upgrade",
-  "version": "12.0.0",
-  "description": "SpaceNovaX v12 referral and scale upgrade",
+  "name": "spacenovax-fullstack-v13-friends-fix",
+  "version": "13.0.0",
+  "description": "SpaceNovaX v13 friends referral fix",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

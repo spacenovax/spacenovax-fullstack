@@ -102,3 +102,31 @@
   .balance h2{font-size:34px}
   .share-grid{grid-template-columns:1fr}
 }
+
+/* v13 friends page final fix */
+.friends-fixed{padding:22px}
+.friends-fixed h3{font-size:28px;margin-bottom:14px}
+.ref-sub{font-size:18px;line-height:1.4;margin:0 0 22px;color:#dce4ff}
+.ref-sub b{color:#38ffd0}
+.ref-label{font-size:18px;font-weight:900;color:#dce4ff;margin-bottom:10px}
+.code-box{display:flex;align-items:center;justify-content:space-between;border:1px solid #5b6ee688;background:#071026cc;border-radius:18px;padding:18px 18px;margin-bottom:12px;box-shadow:inset 0 0 22px #178dff16}
+.code-box strong{font-size:36px;letter-spacing:1px;color:#fff;text-shadow:0 0 14px #ffffff66}
+.copy-mini{width:48px;height:48px;border:1px solid #34efff88;border-radius:14px;background:#ffffff08;color:white;font-size:24px}
+.invite-link{font-size:15px;color:#8ff7ff;border:1px solid #34efff44;background:#051022cc;border-radius:15px;padding:14px;margin:12px 0 18px;word-break:break-all}
+.share-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.act.compact{height:72px;min-height:72px;text-align:center;display:flex;align-items:center;justify-content:center;font-size:18px;line-height:1.1;padding:12px}
+.ref-stats{display:grid;grid-template-columns:1fr 1fr;overflow:hidden;margin-top:16px}
+.ref-stats div{padding:18px 10px;text-align:center;border-right:1px solid #ffffff18;border-bottom:1px solid #ffffff18}
+.ref-stats div:nth-child(2n){border-right:0}
+.ref-stats div:nth-child(3),.ref-stats div:nth-child(4){border-bottom:0}
+.ref-stats span{display:block;color:#c2caea;font-size:14px;font-weight:700}
+.ref-stats b{display:block;color:#34efff;font-size:22px;margin-top:8px;text-shadow:0 0 14px #34efff88}
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%) translateY(40px);background:linear-gradient(135deg,#0e1534,#7e43ff);border:1px solid #34efff77;color:white;border-radius:999px;padding:13px 22px;font-weight:1000;z-index:9999;opacity:0;pointer-events:none;box-shadow:0 0 28px #7e43ff}
+.toast.show{animation:toastIn 1.8s ease forwards}
+@keyframes toastIn{0%{opacity:0;transform:translateX(-50%) translateY(40px)}15%,80%{opacity:1;transform:translateX(-50%) translateY(0)}100%{opacity:0;transform:translateX(-50%) translateY(20px)}}
+@media(max-width:430px){
+  .code-box strong{font-size:30px}
+  .share-grid{grid-template-columns:1fr}
+  .act.compact{height:66px;min-height:66px}
+  .friends-fixed{padding:18px}
+}
