@@ -284,3 +284,256 @@
   .v15-action-grid{grid-template-columns:repeat(3,1fr)}
   .v15-main-actions{grid-template-columns:1fr}
 }
+
+/* v16 centered spaceship final polish */
+.brand:after{content:"v16";margin-left:8px;font-size:13px;background:#7e43ff77;border:1px solid #b86cff;border-radius:10px;padding:3px 8px;font-weight:1000}
+.v15-hero{
+  height:585px;
+  background:
+    radial-gradient(circle at 58% 47%,#2a40ff22,transparent 34%),
+    radial-gradient(circle at 70% 18%,#7e43ff22,transparent 28%),
+    linear-gradient(180deg,#061026,#030714);
+  border-color:#34efff88;
+}
+.v15-stars-layer{
+  opacity:.46;
+  background-image:
+    radial-gradient(#fff 1.4px,transparent 1.6px),
+    radial-gradient(#34efff 1.2px,transparent 1.5px),
+    radial-gradient(#df42ff 1.2px,transparent 1.5px),
+    radial-gradient(#ffffffcc 2px,transparent 2.4px);
+  background-size:24px 24px,63px 63px,101px 101px,157px 157px;
+  animation:v16Stars 5.5s ease-in-out infinite alternate;
+}
+@keyframes v16Stars{from{opacity:.34;filter:brightness(.9)}to{opacity:.7;filter:brightness(1.55)}}
+.v15-hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(128deg,transparent 0 48%,#8b35ff44 49%,transparent 51%),
+    linear-gradient(145deg,transparent 0 68%,#34efff33 69%,transparent 71%);
+  opacity:.5;
+  pointer-events:none;
+}
+
+/* Better planets */
+.v15-planet{
+  left:-82px;
+  bottom:92px;
+  width:245px;
+  height:245px;
+  background:
+    radial-gradient(circle at 38% 30%,#ffffff,#7bf5ff 12%,#225fd1 32%,#092150 58%,#020715 86%),
+    conic-gradient(from 20deg,#133d8a,#34efff,#12255c,#0a1230,#133d8a);
+  box-shadow:0 0 82px #178dff, inset -34px -34px 48px #000d, inset 22px 18px 28px #ffffff22;
+}
+.v15-planet:before{
+  content:"";
+  position:absolute;
+  inset:-10px;
+  border-radius:50%;
+  border:2px solid #8ff7ff55;
+  filter:blur(1px);
+}
+.v15-planet:after{
+  content:"";
+  position:absolute;
+  inset:14px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 70% 60%,#ffffff22 0 3px,transparent 4px),
+    radial-gradient(circle at 48% 72%,#00000044 0 8px,transparent 10px),
+    linear-gradient(135deg,transparent 23%,#ffffff1d 29%,transparent 36%,#0005 63%,transparent 72%);
+  filter:blur(1px);
+}
+.v15-moon{
+  left:auto;
+  right:72px;
+  top:118px;
+  width:70px;
+  height:70px;
+  background:radial-gradient(circle at 35% 28%,#e6d0ff,#7e2bd1 46%,#160823 82%);
+  box-shadow:0 0 32px #d93cffaa;
+}
+.v15-moon:after{
+  content:"";
+  position:absolute;
+  inset:12px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 35%,#0005 0 4px,transparent 6px),radial-gradient(circle at 70% 60%,#fff4 0 2px,transparent 4px);
+}
+
+/* Centered spaceship */
+.v15-ship{
+  left:50%;
+  right:auto;
+  top:210px;
+  width:390px;
+  height:230px;
+  transform:translateX(-50%) rotate(0deg);
+  z-index:5;
+  filter:drop-shadow(0 0 38px #34efff) drop-shadow(0 0 28px #7e43ff);
+  animation:v16Ship 3.2s ease-in-out infinite;
+}
+@keyframes v16Ship{
+  0%,100%{transform:translateX(-50%) translateY(0) scale(1)}
+  50%{transform:translateX(-50%) translateY(-12px) scale(1.018)}
+}
+.v15-ship-body{
+  left:112px;
+  top:82px;
+  width:195px;
+  height:68px;
+  border-radius:42% 42% 54% 54%;
+  background:linear-gradient(90deg,#0a1028,#e8fbff 26%,#6d83b1 48%,#101735 72%,#070b18);
+  transform:rotate(90deg);
+  box-shadow:inset 0 0 22px #34efff,0 0 16px #fff4;
+}
+.v15-ship-nose{
+  left:158px;
+  right:auto;
+  top:14px;
+  width:96px;
+  height:120px;
+  background:linear-gradient(180deg,#e9fbff,#7c8caf 48%,#0c122e);
+  clip-path:polygon(50% 0,100% 100%,0 100%);
+  box-shadow:inset 0 0 18px #34efff;
+}
+.v15-wing.top{
+  left:36px;
+  top:102px;
+  width:155px;
+  height:78px;
+  transform:rotate(0deg);
+  clip-path:polygon(100% 0,0 50%,100% 100%,82% 50%);
+  background:linear-gradient(135deg,#101735,#eaf8ff 45%,#178dff 70%,#150b52);
+}
+.v15-wing.bottom{
+  left:200px;
+  bottom:50px;
+  width:155px;
+  height:78px;
+  clip-path:polygon(0 0,100% 50%,0 100%,18% 50%);
+  background:linear-gradient(45deg,#101735,#eaf8ff 45%,#178dff 70%,#150b52);
+}
+.v15-engine{
+  left:142px;
+  top:auto;
+  bottom:28px;
+  width:38px;
+  height:38px;
+  background:#050612;
+  border:2px solid #9ffaff;
+  box-shadow:0 0 18px #34efff;
+}
+.v15-engine.e1{left:138px;bottom:42px}
+.v15-engine.e2{left:218px;bottom:42px}
+.v15-flame{
+  left:154px;
+  top:auto;
+  bottom:-78px;
+  width:82px;
+  height:130px;
+  border-radius:50%;
+  background:radial-gradient(ellipse at top,#fff 0 10%,#34efff 22%,#7e43ff 45%,#df42ff 65%,transparent 76%);
+  transform-origin:top center;
+  animation:v16Flame .18s infinite alternate;
+}
+@keyframes v16Flame{
+  from{opacity:.75;transform:scaleY(.86) scaleX(.78);filter:hue-rotate(0)}
+  to{opacity:1;transform:scaleY(1.18) scaleX(1.05);filter:hue-rotate(38deg)}
+}
+.v15-ship small{
+  left:88px;
+  top:128px;
+  font-size:24px;
+}
+.v15-ship small:after{
+  content:"";
+  position:absolute;
+  left:188px;
+  top:0;
+  content:"SPNX";
+  color:#34efff;
+  text-shadow:0 0 12px #34efff;
+}
+
+/* Hero content refinements */
+.v15-balance{top:34px;left:20px;z-index:8}
+.v15-balance h2{font-size:43px}
+.v15-balance p{font-size:29px}
+.v15-phase{right:16px;top:18px}
+.v15-today{
+  left:50%;
+  bottom:84px;
+  width:300px;
+  transform:translateX(-50%);
+  justify-content:center;
+  padding:16px 18px;
+  border-color:#34efff88;
+  box-shadow:0 0 28px #34efff44,inset 0 0 24px #7e43ff22;
+}
+.v15-today b{font-size:27px}
+.v15-boost{
+  left:24px;
+  right:24px;
+  bottom:16px;
+  border-color:#586eff99;
+}
+.v15-particle{font-size:21px;z-index:9}
+.v15-particle.p1{left:72px;right:auto;top:260px}
+.v15-particle.p2{right:84px;bottom:160px}
+.v15-gems{
+  right:22px;
+  bottom:128px;
+  width:210px;
+  height:120px;
+  background:
+    radial-gradient(circle at 18% 60%,#b85cff 0 6px,transparent 7px),
+    radial-gradient(circle at 48% 33%,#34efff 0 8px,transparent 9px),
+    radial-gradient(circle at 75% 64%,#fff 0 5px,transparent 7px),
+    radial-gradient(circle at 90% 42%,#7e43ff 0 7px,transparent 8px);
+}
+
+/* Cards sizing */
+.v15-mining-grid{gap:12px}
+.v15-timer,.v15-reward{min-height:172px}
+.v15-action-grid{gap:8px}
+.v15-quick{min-height:82px}
+.v15-main-actions .act{height:84px;min-height:84px}
+
+/* Better mobile layout */
+@media(max-width:430px){
+  .app{padding-left:8px;padding-right:8px}
+  .v15-hero{height:560px}
+  .v15-balance h2{font-size:36px}
+  .v15-balance p{font-size:24px}
+  .v15-moon{right:50px;top:122px;width:56px;height:56px}
+  .v15-planet{left:-94px;bottom:108px;width:228px;height:228px}
+  .v15-ship{
+    left:50%;
+    top:222px;
+    width:340px;
+    height:210px;
+    transform:translateX(-50%) scale(.92);
+  }
+  @keyframes v16Ship{
+    0%,100%{transform:translateX(-50%) translateY(0) scale(.92)}
+    50%{transform:translateX(-50%) translateY(-10px) scale(.94)}
+  }
+  .v15-ship-body{left:100px;top:76px;width:175px;height:60px}
+  .v15-ship-nose{left:142px;top:12px;width:86px;height:108px}
+  .v15-wing.top{left:32px;top:96px;width:135px;height:70px}
+  .v15-wing.bottom{left:180px;bottom:52px;width:135px;height:70px}
+  .v15-engine.e1{left:122px;bottom:48px}
+  .v15-engine.e2{left:195px;bottom:48px}
+  .v15-flame{left:138px;bottom:-64px;width:72px;height:114px}
+  .v15-ship small{left:78px;top:120px;font-size:21px}
+  .v15-today{bottom:84px;width:270px}
+  .v15-boost{left:20px;right:20px}
+  .v15-boost span{font-size:12px}
+  .v15-boost b{font-size:18px}
+  .v15-mining-grid{grid-template-columns:1fr}
+  .v15-action-grid{grid-template-columns:repeat(3,1fr)}
+}
