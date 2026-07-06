@@ -1812,6 +1812,125 @@
   .v35-meteor.m3{top:112px;width:96px}
 }
 
+
+/* v36 engraved SPNX emblem final polish */
+.brand:after{
+  content:"v36";
+  margin-left:8px;
+  font-size:13px;
+  background:#7e43ff77;
+  border:1px solid #b86cff;
+  border-radius:10px;
+  padding:3px 8px;
+  font-weight:1000;
+}
+
+/* ship silhouette stays, glow slightly calmer */
+.v26-ship{
+  left:52%!important;
+  top:264px!important;
+  width:360px!important;
+  height:230px!important;
+  filter:drop-shadow(0 0 26px #34efff) drop-shadow(0 0 26px #7e43ff)!important;
+}
+
+/* SPNX becomes engraved decal, not sticker */
+.v26-ship text,
+.v26-ship text:nth-of-type(1),
+.v26-ship text:nth-of-type(2){
+  font-size:24px!important;
+  transform:translate(-34px,-8px) rotate(13deg)!important;
+  transform-origin:500px 294px!important;
+  letter-spacing:1px!important;
+  paint-order:stroke!important;
+}
+
+/* shadow layer: subtle cut-in */
+.v26-ship text:nth-of-type(1){
+  fill:#061126!important;
+  stroke:rgba(255,255,255,.28)!important;
+  stroke-width:1px!important;
+  opacity:.55!important;
+  filter:none!important;
+}
+
+/* visible layer: engraved cyan, lower glow */
+.v26-ship text:nth-of-type(2){
+  fill:rgba(46,255,241,.82)!important;
+  stroke:#031126!important;
+  stroke-width:.9px!important;
+  opacity:.86!important;
+  filter:
+    drop-shadow(0 0 3px rgba(45,247,238,.58))
+    drop-shadow(0 0 7px rgba(52,239,255,.24))!important;
+}
+
+/* add premium wing highlight using SVG global strokes */
+.v26-ship svg path{
+  vector-effect:non-scaling-stroke;
+}
+
+/* Today card: more transparent, less blocking */
+.v15-today{
+  bottom:52px!important;
+  background:rgba(3,7,18,.58)!important;
+  border-color:#9b42ff66!important;
+  box-shadow:0 0 14px rgba(126,67,255,.25)!important;
+  backdrop-filter:blur(8px)!important;
+}
+
+/* background: keep alive, not too busy */
+.v24-starfield{opacity:.66!important}
+.v32-random-stars{opacity:.74!important}
+.v18-nebula{opacity:.40!important}
+.v32-deep-nebula{opacity:.58!important}
+
+/* random-feel meteors: same average 5 sec, staggered directions */
+.v35-meteor.m1{
+  animation-duration:5.4s!important;
+  animation-delay:0s!important;
+}
+.v35-meteor.m2{
+  animation-duration:5.9s!important;
+  animation-delay:1.7s!important;
+}
+.v35-meteor.m3{
+  animation-duration:4.8s!important;
+  animation-delay:3.3s!important;
+}
+
+/* meteor opacity controlled: visible but not distracting */
+.v35-meteor{
+  opacity:0;
+  box-shadow:0 0 9px #34efff,0 0 18px rgba(52,239,255,.35)!important;
+}
+
+/* engine glow only */
+.mk-flame{display:none!important}
+.v26-engine-particles{
+  opacity:.42!important;
+  filter:drop-shadow(0 0 9px #34efff)!important;
+}
+
+/* mobile polish */
+@media(max-width:430px){
+  .v26-ship{
+    left:52%!important;
+    top:272px!important;
+    width:324px!important;
+    height:210px!important;
+  }
+  .v26-ship text,
+  .v26-ship text:nth-of-type(1),
+  .v26-ship text:nth-of-type(2){
+    font-size:22px!important;
+    transform:translate(-30px,-7px) rotate(13deg)!important;
+  }
+  .v15-today{
+    bottom:56px!important;
+  }
+}
+
 </style></head><body><div class="bg"></div><div class="meteor m1"></div><div class="meteor m2"></div><div class="meteor m3"></div><div class="particles"></div><main class="app">
 <header class="top"><div class="brand"><div class="symbol"><b>X</b><small>SPNX</small></div><div><h1>SpaceNovaX</h1><p>Explore. Earn. Beyond.</p></div></div><button class="phase">🚀 <span id="phaseName">Genesis Launch</span></button></header>
 <section id="home" class="page active">
