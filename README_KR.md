@@ -1,17 +1,16 @@
-# SpaceNovaX v38 Canvas Meteor UI
+# SpaceNovaX v39 Mobile Header Fix
 
 수정:
-- CSS 유성 방식 제거
-- Canvas 기반 우주 배경 엔진 추가
-- 4~6초마다 유성 자동 생성
-- 첫 유성은 약 0.9초 후 바로 보이도록 설정
-- 유성 길이/속도/색상 랜덤 적용
-- 별 랜덤 반짝임 추가
-- 모바일/PC 동일 동작
-- 기존 V37/V36 UI 유지
+- 휴대폰 화면에서 상단 로고/SpaceNovaX/Genesis Launch가 잘리는 문제 수정
+- Header를 3열 Grid로 재구성
+- 로고 크기 모바일 최적화
+- SpaceNovaX 텍스트 말줄임 처리
+- Genesis Launch 버튼 모바일 폭 제한
+- 370px 이하 작은 화면 대응
+- V38 Canvas 유성/별 효과 유지
 
 배포:
 1. 압축 풀기
 2. GitHub spacenovax-fullstack에 전체 덮어올리기
 3. Render Manual Deploy
-4. 캐시 방지 접속: https://spacenovax-fullstack.onrender.com/?v=38
+4. 접속: https://spacenovax-fullstack.onrender.com/?v=39

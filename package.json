@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v38-canvas-meteor-ui",
-  "version": "38.0.0",
-  "description": "SpaceNovaX v38 canvas meteor background UI",
+  "name": "spacenovax-fullstack-v39-mobile-header-fix",
+  "version": "39.0.0",
+  "description": "SpaceNovaX v39 mobile header fix",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
