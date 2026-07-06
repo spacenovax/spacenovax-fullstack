@@ -134,6 +134,62 @@
   .friends-fixed{padding:18px}
 }
 
+
+/* v14 referral final */
+.friends-v14{padding:22px;overflow:hidden;position:relative}
+.friends-v14:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 8%,#1b7dff44,transparent 34%),radial-gradient(circle at 35% 15%,#8e36ff33,transparent 24%);pointer-events:none}
+.friends-v14>*{position:relative;z-index:1}
+.friends-hero{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:22px;min-height:150px;background:radial-gradient(circle at 80% 30%,#34efff20,transparent 45%);border-radius:18px}
+.friends-hero h3{font-size:42px;margin:0 0 16px;line-height:1}
+.friends-hero p{font-size:25px;line-height:1.45;margin:0;color:#fff}
+.friends-hero p b{font-size:34px;color:#38ffd0}
+.mini-ship{width:190px;height:120px;margin-top:8px;position:relative;filter:drop-shadow(0 0 22px #34efff);animation:v14ship 3.5s ease-in-out infinite}
+.mini-ship:before{content:"";position:absolute;right:0;top:32px;width:150px;height:52px;border-radius:60% 45% 45% 60%;background:linear-gradient(90deg,#eaf8ff,#6f88ba 38%,#121a40 72%);clip-path:polygon(0 30%,62% 0,100% 50%,62% 100%,0 70%,15% 50%);box-shadow:inset 0 0 14px #34efff}
+.mini-ship:after{content:"";position:absolute;left:10px;top:44px;width:80px;height:26px;border-radius:50%;background:linear-gradient(90deg,#143eff,#34efff,#fff,transparent);animation:v14flame .18s infinite alternate}
+@keyframes v14ship{50%{transform:translateY(-8px) translateX(-4px)}}
+@keyframes v14flame{to{transform:scaleX(1.2);opacity:.72}}
+.ref-label{font-size:22px;font-weight:900;color:#b972ff;margin:14px 0 10px}
+.invite-title{margin-top:22px}
+.code-box.v14-code{display:flex;align-items:center;justify-content:space-between;border:2px solid #cb58ff;background:#050817d9;border-radius:20px;padding:22px 22px;box-shadow:0 0 28px #7e43ff55,inset 0 0 22px #178dff14}
+.code-box.v14-code strong{font-size:50px;letter-spacing:1px;color:#fff;text-shadow:0 0 18px #ffffff66}
+.copy-mini,.copy-link-mini{width:64px;height:64px;border:1px solid #cb58ff;border-radius:16px;background:#ffffff08;color:white;font-size:30px;box-shadow:0 0 18px #7e43ff44}
+.invite-link.v14-link{display:flex;align-items:center;justify-content:space-between;gap:10px;border:2px solid #00eaff;background:#051022cc;color:#fff;border-radius:17px;padding:14px 14px 14px 22px;font-size:24px;word-break:break-all}
+.invite-link.v14-link span{color:#fff}
+.copy-link-mini{border-color:#00eaff;box-shadow:0 0 18px #00eaff44;flex:0 0 auto}
+.share-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}
+.act.compact{height:92px;min-height:92px;text-align:left;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;font-size:24px;line-height:1.1;padding:18px 22px}
+.act.compact span{font-size:16px;margin-top:8px}
+.telegram-btn{background:linear-gradient(135deg,#00bfff,#0c4fc9,#071947)!important;border-color:#00eaff!important}
+.ref-stats-v14{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+.stat-card{border:1px solid #ffffff22;border-radius:18px;background:#060b1cdd;padding:18px;display:grid;grid-template-columns:72px 1fr;grid-template-rows:auto auto auto;column-gap:16px;align-items:center;min-height:130px}
+.stat-card i{grid-row:1/4;width:72px;height:72px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:36px;background:#ffffff08;box-shadow:0 0 24px #7e43ff66}
+.stat-card span{font-size:20px;color:#fff}
+.stat-card b{font-size:34px;color:#fff;line-height:1;margin-top:4px}
+.stat-card b em{font-style:normal;color:#a94cff;font-size:25px}
+.stat-card small{font-size:16px;color:#c2caea}
+.stat-card.purple{border-color:#9b42ff66}.stat-card.purple i{box-shadow:0 0 26px #9b42ff;background:#35156e}
+.stat-card.green{border-color:#1bff8b66}.stat-card.green i{box-shadow:0 0 26px #1bff8b;background:#0a552d}
+.stat-card.gold{border-color:#ffc80077}.stat-card.gold i{box-shadow:0 0 26px #ffc800;background:#6b4700}
+.stat-card.cyan{border-color:#00eaff77}.stat-card.cyan i{box-shadow:0 0 26px #00eaff;background:#053754}.stat-card.cyan b{color:#38ffd0}
+.info-note{border:1px solid #5166e8aa;border-radius:16px;padding:16px 18px;margin-top:18px;color:#fff;font-size:18px;background:#081026cc}
+.info-note b{color:#38ffd0}
+.toast{position:fixed;left:50%;bottom:104px;transform:translateX(-50%) translateY(40px);background:linear-gradient(135deg,#0e1534,#7e43ff);border:1px solid #34efff77;color:white;border-radius:999px;padding:13px 22px;font-weight:1000;z-index:9999;opacity:0;pointer-events:none;box-shadow:0 0 28px #7e43ff}
+.toast.show{animation:toastIn 1.8s ease forwards}
+@keyframes toastIn{0%{opacity:0;transform:translateX(-50%) translateY(40px)}15%,80%{opacity:1;transform:translateX(-50%) translateY(0)}100%{opacity:0;transform:translateX(-50%) translateY(20px)}}
+@media(max-width:430px){
+  .friends-v14{padding:18px}
+  .friends-hero{min-height:120px}
+  .friends-hero h3{font-size:36px}
+  .friends-hero p{font-size:21px}
+  .friends-hero p b{font-size:30px}
+  .mini-ship{width:150px;height:100px}
+  .code-box.v14-code strong{font-size:38px}
+  .invite-link.v14-link{font-size:17px}
+  .share-grid{grid-template-columns:1fr}
+  .act.compact{height:78px;min-height:78px;font-size:20px}
+  .ref-stats-v14{grid-template-columns:1fr}
+}
+
 </style></head><body><div class="bg"></div><div class="meteor m1"></div><div class="meteor m2"></div><div class="meteor m3"></div><div class="particles"></div><main class="app">
 <header class="top"><div class="brand"><div class="symbol"><b>X</b><small>SPNX</small></div><div><h1>SpaceNovaX</h1><p>Explore. Earn. Beyond.</p></div></div><button class="phase">🚀 <span id="phaseName">Genesis Launch</span></button></header>
 <section id="home" class="page active">
@@ -165,29 +221,40 @@
 </div></section>
 <section id="missions" class="page"><div class="section glass"><h3>🎯 Missions</h3><button class="act" id="checkinBtn">✅ DAILY CHECK-IN<span>+20 SPNX</span></button><div id="missionList"></div></div></section>
 <section id="friends" class="page">
-<div class="friends-card glass friends-fixed">
-  <h3>👥 Friends</h3>
-  <p class="ref-sub">Earn <b>30% bonus</b> from your friends' mining rewards.</p>
-
-  <div class="ref-label">Referral Code</div>
-  <div class="code-box">
-    <strong id="refCode">SPNX-USER</strong>
-    <button class="copy-mini" onclick="copyCodeOnly()">📋</button>
+<div class="friends-card glass friends-v14">
+  <div class="friends-hero">
+    <div>
+      <h3>👥 Friends</h3>
+      <p>Invite friends and earn <b>30%</b><br>of their mining rewards.</p>
+    </div>
+    <div class="mini-ship"></div>
   </div>
 
-  <div class="invite-link" id="inviteLink">https://t.me/SpaceNovaX_bot?start=SPNX-USER</div>
+  <div class="ref-label">Your Referral Code</div>
+  <div class="code-box v14-code">
+    <strong id="refCode">SPNX-USER</strong>
+    <button class="copy-mini" onclick="copyCodeOnly()" aria-label="Copy code">📋</button>
+  </div>
+
+  <div class="ref-label invite-title">Your Invite Link</div>
+  <div class="invite-link v14-link">
+    <span id="inviteLink">https://t.me/SpaceNovaX_bot?start=SPNX-USER</span>
+    <button class="copy-link-mini" onclick="copyRef()" aria-label="Copy invite link">📋</button>
+  </div>
 
   <div class="share-grid">
-    <button class="act compact" onclick="copyRef()">📋 COPY LINK</button>
-    <button class="act secondary compact" onclick="shareTelegram()">✈️ SHARE ON TELEGRAM</button>
+    <button class="act compact" onclick="copyRef()">📋 COPY INVITE LINK<span>Copy link and share</span></button>
+    <button class="act secondary compact telegram-btn" onclick="shareTelegram()">✈️ SHARE ON TELEGRAM<span>Share with friends</span></button>
   </div>
 
-  <div class="ref-stats glass">
-    <div><span>👥 Total Friends</span><b id="refCount">128</b></div>
-    <div><span>⚡ Active Miners</span><b>86</b></div>
-    <div><span>🎁 Total Rewards</span><b>18,420 SPNX</b></div>
-    <div><span>💎 Referral Bonus</span><b id="refBonus2">+30%</b></div>
+  <div class="ref-stats-v14">
+    <div class="stat-card purple"><i>👥</i><span>Total Friends</span><b id="refCount">128</b><small>People you invited</small></div>
+    <div class="stat-card green"><i>⚡</i><span>Active Miners</span><b>86</b><small>Mining right now</small></div>
+    <div class="stat-card gold"><i>🎁</i><span>Total Rewards</span><b>18,420 <em>SPNX</em></b><small>Earned from referrals</small></div>
+    <div class="stat-card cyan"><i>💎</i><span>Referral Bonus</span><b id="refBonus2">+30%</b><small>From friends’ rewards</small></div>
   </div>
+
+  <div class="info-note">ℹ️ You earn <b>30%</b> of your friends’ mining rewards for as long as they mine.</div>
 </div>
 <div id="toast" class="toast">✅ Copied!</div>
 </section>
@@ -312,6 +379,42 @@ copyRef = function(){
 };
 function shareTelegram(){
   const url = encodeURIComponent(getInviteUrl());
+  const text = encodeURIComponent("Join SpaceNovaX and mine SPNX Points with me!");
+  window.open(`https://t.me/share/url?url=${url}&text=${text}`,"_blank");
+}
+
+/* v14 final referral hard-fix: no SPNX anywhere */
+function getFixedReferralCode(){ return "SPNX-USER"; }
+function getInviteUrl(){ return "https://t.me/SpaceNovaX_bot?start=SPNX-USER"; }
+function paintReferral(){
+  const refCodeEl = document.getElementById("refCode");
+  const inviteEl = document.getElementById("inviteLink");
+  if(refCodeEl) refCodeEl.textContent = "SPNX-USER";
+  if(inviteEl) inviteEl.textContent = "https://t.me/SpaceNovaX_bot?start=SPNX-USER";
+}
+const __oldRenderV14 = render;
+render = function(){
+  __oldRenderV14();
+  paintReferral();
+};
+setInterval(paintReferral, 500);
+function showToast(){
+  const t = document.getElementById("toast");
+  if(!t) return;
+  t.classList.remove("show");
+  void t.offsetWidth;
+  t.classList.add("show");
+}
+function copyCodeOnly(){
+  navigator.clipboard?.writeText("SPNX-USER");
+  showToast();
+}
+copyRef = function(){
+  navigator.clipboard?.writeText("https://t.me/SpaceNovaX_bot?start=SPNX-USER");
+  showToast();
+};
+function shareTelegram(){
+  const url = encodeURIComponent("https://t.me/SpaceNovaX_bot?start=SPNX-USER");
   const text = encodeURIComponent("Join SpaceNovaX and mine SPNX Points with me!");
   window.open(`https://t.me/share/url?url=${url}&text=${text}`,"_blank");
 }
