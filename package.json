@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v39-mobile-header-fix",
-  "version": "39.0.0",
-  "description": "SpaceNovaX v39 mobile header fix",
+  "name": "spacenovax-fullstack-v40-two-line-header",
+  "version": "40.0.0",
+  "description": "SpaceNovaX v40 two-line mobile header",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
