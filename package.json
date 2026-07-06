@@ -1,7 +1,7 @@
 {
-  "name": "spacenovax-fullstack-v17-final-polish-ui",
-  "version": "17.0.0",
-  "description": "SpaceNovaX v17 final polish UI",
+  "name": "spacenovax-fullstack-v18-release-candidate-ui",
+  "version": "18.0.0",
+  "description": "SpaceNovaX v18 release candidate UI polish",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
